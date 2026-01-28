@@ -18,16 +18,15 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-# project-1 _config.yml 
-# title: Project 1
-# description: Your first project content
+# project-1 _config.yml
+# title: Project 1          # keep hub title or adjust
+#description: Your first project content
 # url: "https://username.github.io"
 baseurl: "/project-1"
 markdown: kramdown
 # theme: minima
 
 
-# Site settings
 url: "https://schipperius.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 destination: ./public
 
