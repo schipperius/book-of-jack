@@ -22,7 +22,8 @@
 # title: Project 1          # keep hub title or adjust
 #description: Your first project content
 # url: "https://username.github.io"
-baseurl: "/project-1"
+
+
 markdown: kramdown
 # theme: minima
 
@@ -39,9 +40,8 @@ author: Mark Schipper
 email: 
 description: >- # this means to ignore newlines until "baseurl:"
   An exploration of the word Jack; its origins and usage.
-baseurl: "" # the subpath of your site, e.g. /blog
-
-# twitter_username: jekyllrb
+baseurl: "/project-1" # baseurl: "" # the subpath of your site, e.g. /blog
+# Note: if you are using GitHub pages, this is usually the repository name
 github_username: schipperius
 
 # Build settings
