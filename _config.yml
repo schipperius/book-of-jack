@@ -18,34 +18,24 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-# project-1 _config.yml
-# title: Project 1          # keep hub title or adjust
-#description: Your first project content
-# url: "https://username.github.io"
-
-
-markdown: kramdown
-# theme: minima
-
-
+github_username: schipperius
 url: "https://schipperius.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/project-1" # the subpath of your site, if you are using GitHub pages, this is usually the repository name
 destination: ./public
-
 
 suptitle: the
 title: Book of Jack
 subtitle: An exploration of the word Jack; its origins and usage.
-author: Mark Schipper
-# simple_search: http://google.com/search
-email: 
-description: >- # this means to ignore newlines until "baseurl:"
+description: >- # this means to ignore newlines until "baseurl:" 
   An exploration of the word Jack; its origins and usage.
-baseurl: "/project-1" # baseurl: "" # the subpath of your site, e.g. /blog
-# Note: if you are using GitHub pages, this is usually the repository name
-github_username: schipperius
+author: Mark Schipper
+# email: 
+
+# simple_search: http://google.com/search
 
 # Build settings
 # theme: minima
+
 plugins:
   - jekyll-feed
 
@@ -56,6 +46,8 @@ collections:
 sass:
   sass_dir: _sass
   cache_location: ./.sass-cache
+
+markdown: kramdown
 
 # Exclude from processing.
 # The following items will not be processed, by default.
