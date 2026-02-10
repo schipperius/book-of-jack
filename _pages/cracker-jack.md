@@ -19,7 +19,7 @@ tags:
       <div class="col-10 col-sm-8 col-lg-6">
         <figure class="figure">
           <img
-            src="{{ '/assets/img/cracker-jack-1024x768.jpg' | relative_url }}"
+            src="{{ '/assets/img/cracker-jack.jpg' | relative_url }}"
             class="img-fluid img-thumbnail hero-image"
             alt="Cracker Jack packaging from the late 19th century"
             width="700"
