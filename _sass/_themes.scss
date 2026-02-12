@@ -1,39 +1,17 @@
   /* Since this is a partial, no need for front matter */
-
-  /* These are my custom theme styles: ccolours, fonts, spacing, ... */
-
+  /* These are my custom theme styles: colours, fonts, spacing, ... */
   /* If needed, create _overrides.scss for navbar, footer, etc., */
   /* or separate them out... */
   /* _navbar.scss for navbar specific styles */
   /* _footer.scss for footer specific styles */
   /* and so on... */
 
-/* Bootstrap Heroes.css file */
-/* =========================
-   Hero Image
-   ========================= */
-
-.hero-image {
-  border-radius: 1rem;
-  transition: opacity 0.3s ease;
-}
-
-/* Light theme (default) */
-[data-bs-theme="light"] .hero-image {
-  opacity: 1;
-  mix-blend-mode: normal;
-}
-
-/* Dark theme */
-[data-bs-theme="dark"] .hero-image {
-  opacity: 0.85;
-  mix-blend-mode: screen;
-}
-
-
 /* =========================
    Hero Figure + Caption
    ========================= */
+.hero-image {
+  border-radius: 1rem;
+  transition: opacity 0.3s ease;
 
 .hero-figure {
   margin: 0;
@@ -60,11 +38,26 @@
   font-weight: 500;
 }
 
+/* =========================
+   Themes (Light, Dark, Auto)
+   ========================= */
+
+/* Light theme (default) */
+[data-bs-theme="light"] .hero-image {
+  opacity: 1;
+  mix-blend-mode: normal;
+}
+
+/* Dark theme */
+[data-bs-theme="dark"] .hero-image {
+  opacity: 0.85;
+  mix-blend-mode: screen;
+}
+
 /* Dark theme refinement */
 [data-bs-theme="dark"] .hero-caption {
   opacity: 0.85;
 }
-
 /* =========================
    Drop cap for the opening paragraph
    ========================= */
@@ -79,30 +72,11 @@
 
 
 /* =========================
-   Themed grid and container styles
+   Cover page custom styles
    ========================= */
-.themed-grid-col {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-  background-color: rgba(112.520718, 44.062154, 249.437846, .15);
-  border: 1px solid rgba(112.520718, 44.062154, 249.437846, .3);
-}
-
-.themed-container {
-  padding: .75rem;
-  margin-bottom: 1.5rem;
-  background-color: rgba(112.520718, 44.062154, 249.437846, .15);
-  border: 1px solid rgba(112.520718, 44.062154, 249.437846, .3);
-}
-
-
-
-
-
-/* Custom styles for landing page, using cover from bootstrap examples
+/* 
  * Globals
  */
-
 
 /* Custom default button */
 .btn-light,
@@ -111,7 +85,6 @@
   color: #333;
   text-shadow: none; /* Prevent inheritance from `body` */
 }
-
 
 /*
  * Base structure
@@ -125,7 +98,6 @@ body {
 .cover-container {
   max-width: 42em;
 }
-
 
 /*
  * Header

@@ -11,12 +11,6 @@
 /* ========================= Hero Image ========================= */
 .hero-image { border-radius: 1rem; transition: opacity 0.3s ease; }
 
-/* Light theme (default) */
-[data-bs-theme="light"] .hero-image { opacity: 1; mix-blend-mode: normal; }
-
-/* Dark theme */
-[data-bs-theme="dark"] .hero-image { opacity: 0.85; mix-blend-mode: screen; }
-
 /* ========================= Hero Figure + Caption ========================= */
 .hero-figure { margin: 0; counter-increment: figure; }
 
@@ -25,18 +19,21 @@
 /* Figure numbering */
 .hero-caption::before { content: "Figure " counter(figure) ". "; font-weight: 500; }
 
+/* ========================= Themes (Light, Dark, Auto) ========================= */
+/* Light theme (default) */
+[data-bs-theme="light"] .hero-image { opacity: 1; mix-blend-mode: normal; }
+
+/* Dark theme */
+[data-bs-theme="dark"] .hero-image { opacity: 0.85; mix-blend-mode: screen; }
+
 /* Dark theme refinement */
 [data-bs-theme="dark"] .hero-caption { opacity: 0.85; }
 
 /* ========================= Drop cap for the opening paragraph ========================= */
 .drop-cap:first-of-type::first-letter { float: left; font-size: 5em; line-height: 0.85; font-weight: bold; margin: 0.05em 0.1em 0 0; color: #333; /* Optional: color the letter */ }
 
-/* ========================= Themed grid and container styles ========================= */
-.themed-grid-col { padding-top: .75rem; padding-bottom: .75rem; background-color: rgba(113, 44, 249, 0.15); border: 1px solid rgba(113, 44, 249, 0.3); }
-
-.themed-container { padding: .75rem; margin-bottom: 1.5rem; background-color: rgba(113, 44, 249, 0.15); border: 1px solid rgba(113, 44, 249, 0.3); }
-
-/* Custom styles for landing page, using cover from bootstrap examples Globals */
+/* ========================= Cover page custom styles ========================= */
+/*  Globals */
 /* Custom default button */
 .btn-light, .btn-light:hover, .btn-light:focus { color: #333; text-shadow: none; /* Prevent inheritance from `body` */ }
 
