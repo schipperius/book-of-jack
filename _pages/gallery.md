@@ -20,9 +20,11 @@ permalink: /gallery/
     </div>
   </div>
 </section>
+
 <div class="album py-5 bg-body-tertiary">
   <div class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <!-- First row of cards -->
       <div class="col">
         <div class="card shadow-sm">
           <svg
@@ -46,9 +48,7 @@ permalink: /gallery/
               lead-in to additional content. This content is a little bit
               longer.
             </p>
-            <div
-              class="d-flex justify-content-between align-items-center"
-            >
+            <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
                 <button
                   type="button"
@@ -68,6 +68,7 @@ permalink: /gallery/
           </div>
         </div>
       </div>
+      <!-- First row of cards ends -->
       <div class="col">
         <div class="card shadow-sm">
           <svg

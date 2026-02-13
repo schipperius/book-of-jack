@@ -6,75 +6,107 @@
     <title>Page Not Found</title>
     <link rel="canonical" href="http://localhost:4000/book-of-jack/404.html">
     <link rel="stylesheet" href="/book-of-jack/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/book-of-jack/assets/css/bootstrap-icons.min.css">
     <link rel="stylesheet" href="/book-of-jack/assets/css/main-site.css">
-    <meta name="theme-color" content="">
+<meta name="theme-color" content="">
   </head>
   <body class="d-flex flex-column min-vh-100">
     <script src="/book-of-jack/assets/js/theme-toggle.js"></script>
     <script src="/book-of-jack/assets/js/auto-close-offcanvas.js"></script>
-    
-<div class="container sticky-top bg-body z-3">
-  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"> 
-    
-    <!-- Title and Home link with space on the left for an SVG logo -->
-    <div class="d-flex align-items-center me-md-auto gap-4">
-      <a href="/book-of-jack/" class="d-flex align-items-center link-body-emphasis text-decoration-none"> 
-        
-        <img src="/book-of-jack/assets/images/letter-j.png" class="me-2" width="40" height="32" aria-hidden="true" alt="Letter J logo">
-        <span class="fs-4">the Book of Jack</span> 
-      </a> 
-      <!-- Add 'Start Here' button to activate table of contents. -->
+    <nav class="navbar sticky-top bg-body border-bottom">
+  <div class="container d-flex align-items-center justify-content-between">
+
+    <!-- LEFT GROUP -->
+    <div class="d-flex align-items-center gap-2">
+
+      <!-- Brand -->
+      <a class="navbar-brand d-flex align-items-center mb-0" href="/book-of-jack/">
+        <img
+          src="/book-of-jack/assets/img/letter-j.png"
+          width="40"
+          height="32"
+          class="me-2"
+          alt="Letter J logo">
+
+        <!-- Disappears before Start Here -->
+        <span class="fs-5 d-none d-lg-inline">the Book of Jack</span>
+      </a>
+
+      <!-- Start Here (Offcanvas trigger) -->
       <button
-        class="btn btn-outline-secondary"
+        class="btn btn-outline-secondary btn-sm px-2"
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasNavbarDark"
-        aria-controls="offcanvasNavbarDark"
-        aria-label="Toggle navigation"
-      >
+        aria-controls="offcanvasNavbarDark">
+
         <span class="navbar-toggler-icon"></span>
-        Start Here
+
+        <!-- Hide text earlier than brand -->
+        <span class="ms-2 d-none d-md-inline">Start Here</span>
       </button>
-      <!-- Add 'Jump In' button will go to gallery. -->
-      <button
-        class="btn btn-outline-secondary"
-        type="button"
-        aria-label="Toggle navigation"
-      >
-        <a href="/book-of-jack/gallery/" class="nav-link  px-2">
-          Gallery
-        </a>
-      </button>
-      <!-- Search... need to implement a real search function. -->  
-      <div class="d-flex align-items-center gap-3">
-        <form class="d-flex align-items-between" role="search">
-          <input
-            class="form-control form-control-md me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search">
-          <button class="btn btn-outline-secondary btn-md" type="submit">
-            Search
-          </button>
-        </form>
-      </div>
+
+      <!-- Gallery -->
+      <a href="/book-of-jack/gallery/"
+         class="btn btn-outline-secondary btn-sm px-2">
+
+        <!-- Text on larger screens -->
+        <span class="d-none d-md-inline">Gallery</span>
+
+        <!-- Icon on small screens -->
+        <span class="d-md-none">🖼️</span>
+      </a>
+
     </div>
-      <!-- Theme dropdown -->
+
+
+    <!-- RIGHT GROUP -->
+    <div class="d-flex align-items-center gap-2">
+
+      <!-- Search -->
+      <form class="d-flex align-items-center" role="search">
+
+        <!-- Input disappears on small -->
+        <input
+          class="form-control form-control-sm me-2 d-none d-md-block"
+          type="search"
+          placeholder="Search"
+          aria-label="Search">
+
+        <!-- Icon always visible -->
+        <button class="btn btn-outline-secondary btn-sm px-2" type="submit">
+          🔍
+        </button>
+
+      </form>
+
+      <!-- Theme -->
       <div class="dropdown">
-        <button class="btn btn-outline-secondary dropdown-toggle"
-                type="button"
+        <button class="btn btn-outline-secondary btn-sm px-2 dropdown-toggle"
                 data-bs-toggle="dropdown"
                 aria-expanded="false">
-          Theme
+
+          <!-- Text large -->
+          <span class="d-none d-md-inline">Theme</span>
+
+          <!-- Icon small (placeholder for now) -->
+          <span class="d-md-none">🎨</span>
+
         </button>
+
         <ul class="dropdown-menu dropdown-menu-end">
           <li><button class="dropdown-item" data-bs-theme-value="light">☀ Light</button></li>
           <li><button class="dropdown-item" data-bs-theme-value="dark">🌙 Dark</button></li>
           <li><button class="dropdown-item" data-bs-theme-value="auto">⚙ Auto</button></li>
         </ul>
       </div>
-    <!-- Offcampus sidebar for Table of Contents-->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel">
+
+    </div>
+
+  </div>
+</nav>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasNavbarDarkLabel">Table of Contents</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -112,9 +144,6 @@
   </div>
 </div>
 
-  </header> 
-</div>
-<!-- End navbar -->
 
     <main class="flex-grow-1 px-3">
       <div class="container py-5">
