@@ -87,8 +87,9 @@
 /* Active press */
 .navbar .btn:active { transform: translateY(0); }
 
-.navbar-glass { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); background-color: rgba(var(--bs-body-bg-rgb), 0.85); }
-
+/*
+.navbar-glass { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); background-color: rgba(var(--bs-body-bg-rgb), 0.85);
+} */
 /* Slightly stronger blur on scroll (optional enhancement) */
 .navbar-scrolled { backdrop-filter: blur(12px); }
 
