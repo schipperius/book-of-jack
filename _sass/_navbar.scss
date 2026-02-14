@@ -33,5 +33,92 @@
   .navbar-icons {
     gap: 0.5rem;
   }
+}
 
+/* =========================
+   Navbar Layout + Micro-Polish
+   ========================= */
+
+/* ---------- Container Flex ---------- */
+.navbar > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* left/right groups evenly spaced */
+  gap: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* ---------- Left & Right Groups ---------- */
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* ---------- Logo ---------- */
+.navbar-brand img {
+  width: 40px;
+  height: 32px;
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+@media (max-width: 576px) {
+  .navbar-brand img {
+    width: 36px;
+    height: 28px;
+  }
+}
+
+/* ---------- Collapsible Text Labels ---------- */
+.nav-label {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: opacity 0.2s ease, max-width 0.2s ease;
+}
+
+.d-none.d-md-inline {
+  max-width: 100px;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .d-none.d-md-inline {
+    max-width: 0;
+    opacity: 0;
+  }
+}
+
+/* ---------- Navbar Buttons (Start Here, Gallery, Theme, Search) ---------- */
+.navbar .btn {
+  transition:
+    transform 0.08s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.2s ease;
+}
+
+.navbar .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+
+.navbar .btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ---------- Small Screen Icon Spacing ---------- */
+@media (max-width: 400px) {
+  .navbar-left,
+  .navbar-right {
+    gap: 0.5rem; /* slightly reduced spacing */
+  }
+
+  .navbar > .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 }
