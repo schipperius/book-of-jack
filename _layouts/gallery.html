@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<section class="py-5">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="mb-0">{{ page.gallery_title | default: "Gallery" }}</h2>
+      <p class="lead mb-0">{{ page.gallery_subtitle }}</p>
+    </div>
+
+    <!-- Card Grid -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+      {% for item in site.data.gallery %}
+
+      <div class="col">
+        <div class="card h-100">
+
+          <a href="{{ '/' | append: item.id | append: '/' | relative_url }}"
+             class="text-decoration-none text-dark">
+
+            <img src="{{ item.image | relative_url }}"
+                 class="card-img-top"
+                 alt="{{ item.alt }}">
+
+          </a>
+
+          <div class="card-body">
+            <h5 class="card-title">{{ item.title }}</h5>
+            <p class="card-text">{{ item.description }}</p>
+          </div>
+
+        </div>
+      </div>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section>

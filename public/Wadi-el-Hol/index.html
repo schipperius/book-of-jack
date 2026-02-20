@@ -34,14 +34,14 @@
           <span class="small fw-semibold text-body-secondary ms-2 d-none d-lg-inline">the Book of Jack</span>
         </a>
 
-        <!-- Start Here -->
+        <!-- Menu -->
         <button
           class="btn btn-outline-secondary btn-sm d-none d-md-inline-flex"
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbarDark">
           <span class="navbar-toggler-icon"></span>
-          <span class="ms-2">Start Here</span>
+          <span class="ms-2">Menu</span>
         </button>
 
         <!-- Gallery (desktop text) -->
@@ -145,82 +145,97 @@
       Table of Contents
       ========================= -->
 
-  <!-- Offcanvas Panel -->
+  <!-- Offcanvas: The Book of Jack -->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel">
-  <div class="offcanvas-header">
-    <h4 class="offcanvas-title" id="offcanvasNavbarDarkLabel">Table of Contents</h4>
+
+  <!-- Header -->
+  <div class="offcanvas-header border-bottom">
+    <div>
+      <div class="text-uppercase small text-body-secondary">The Book of</div>
+      <h4 class="offcanvas-title mb-0" id="offcanvasNavbarDarkLabel">Jack</h4>
+    </div>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  
+
+  <!-- Body -->
   <div class="offcanvas-body">
-    <h5>Front Matter</h5>
-    <ul class="navbar-nav">
+
+    <!-- I. Foundations -->
+    <h6 class="mt-4 mb-2 text-uppercase small fw-semibold text-body-secondary">
+      I — Foundations
+    </h6>
+
+    <ul class="nav flex-column mb-3">
       <li class="nav-item">
-        <a href="/jacks/jack-origins/" class="nav-link  px-2">
+        <a href="/jacks/jack-origins/"
+           class="nav-link ">
           Origins
         </a>
       </li>
       <li class="nav-item">
-        <a href="/jacks/about/" class="nav-link  px-2">
+        <a href="/jacks/about/"
+           class="nav-link ">
           About
         </a>
       </li>
       <li class="nav-item">
-        <a href="/jacks/copyright/" class="nav-link  px-2">
+        <a href="/jacks/copyright/"
+           class="nav-link ">
           Copyright
         </a>
       </li>
     </ul>
 
-    <h5>The Letter J</h5>
-    <ul class="navbar-nav">
+    <!-- II. The Letter -->
+    <h6 class="mt-4 mb-2 text-uppercase small fw-semibold text-body-secondary">
+      II — The Letter
+    </h6>
+
+    <ul class="nav flex-column mb-3">
       <li class="nav-item">
-      <a href="/jacks/wadi-el-hol/"
-          class="nav-link active px-2">
-        Wadi El-Hol
-      </a>
-      <a href="/jacks/gallery/"
-        class="btn btn-outline-secondary btn-sm d-none d-md-inline-flex">
-        Gallery
-      </a>
+        <a href="/jacks/wadi-el-hol/"
+           class="nav-link active fw-medium">
+          Wadi El-Hol
+        </a>
       </li>
     </ul>
 
-    <h5>Food and Drink</h5>
-    <ul class="navbar-nav">
+    <!-- III. Embodiments -->
+    <h6 class="mt-4 mb-2 text-uppercase small fw-semibold text-body-secondary">
+      III — Embodiments
+    </h6>
+
+    <ul class="nav flex-column mb-3">
       <li class="nav-item">
-      <a href="/jacks/cracker-jack/"
-          class="nav-link  px-2">
-        Cracker Jack
-      </a>
+        <a href="/jacks/cracker-jack/"
+           class="nav-link ">
+          Cracker Jack
+        </a>
       </li>
     </ul>
 
-    <h5>Media</h5>
-    <ul class="navbar-nav">
+    <!-- IV. Myth & Media -->
+    <h6 class="mt-4 mb-2 text-uppercase small fw-semibold text-body-secondary">
+      IV — Myth & Media
+    </h6>
+
+    <ul class="nav flex-column mb-3">
       <li class="nav-item">
         <a href="/jacks/jack-in-pop-culture/"
-           class="nav-link  px-2">
+           class="nav-link ">
           Jack in Pop Culture
         </a>
       </li>
     </ul>
+
   </div>
-  
 </div>
-
-<!-- Filter/Sort Options: For data-heavy pages like product listings or search results, 
- an offcanvas can hold complex filtering and sorting options that are hidden until needed, 
- improving the main layout's clarity. 
- 
- This site would probably need 50 sepearte entries to need a filter/sort feature. -->
-
-
 
 
     <main class="flex-grow-1 px-3">
       <div class="container py-5">
-        
+        <!-- start hero section -->
+
 <!-- HERO / ENTRY HEADER -->
 <section class="my-5 py-4" id="entry-header">
   <div class="container col-xxl-10 px-4">
@@ -228,50 +243,44 @@
       
       <div class="col-lg-6">
         <figure class="figure">
-          <img src="" class="img-fluid" alt="" loading="lazy" />
+          <img src="/jacks/assets/img/wadi-el-hol.png" class="img-fluid" alt="Wadi el-Hol" loading="lazy" />
+          
+          <figcaption class="figure-caption hero-caption">
+            The Wadi el-Hol inscriptions are among the earliest known alphabetic texts.
+          </figcaption>
           
         </figure>
       </div>
 
       <div class="col-lg-6">
         <h1 class="display-5 fw-bold lh-1 mb-3">
-          
+          Wadi el-Hol
         </h1>
 
         <p class="lead">
-          
+          Carved into the soft limestone cliffs by Semites some 4000 years ago, it is here in Egypt's western desert that we find the first signs of an alphabetic writing system.
         </p>
 
+        
+        <nav class="d-flex flex-wrap gap-3 mt-4" aria-label="Related links">
+          
+            <a href="#history" class="btn btn-outline-secondary btn-lg">
+              History
+            </a>
+          
+            <a href="#cultural-impact" class="btn btn-outline-secondary btn-lg">
+              Cultural Impact
+            </a>
+          
+        </nav>
         
       </div>
 
     </div>
   </div>
 </section>
+<!-- end hero section -->
 
-<!-- HERO / ENTRY HEADER -->
-<section class="my-5 py-4" id="entry-header">
-  <div class="container col-xxl-12 px-4">
-    <div class="row align-items-center g-5">
-      <div class="col-lg-6">
-        <figure class="figure">
-          <img src="/jacks/assets/img/inscriptions.jpg" class="img-fluid" alt="Cracker Jack packaging from the late 19th century" loading="lazy" />
-          <figcaption class="figure-caption hero-caption">
-            Inscriptions
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-lg-6">
-        <h1 class="display-5 fw-bold lh-1 mb-3">Wadi el-Hol</h1>
-        <p class="lead">Carved into the soft limestone cliffs, by Semites some 4000 years ago (during the Middle Kingdom period, 2040-1674 BC), it is here, in Egypt's western desert, that we find the first signs of an alphabetic writing system.</p>
-        <nav class="d-flex flex-wrap gap-3 mt-4" aria-label="Related links">
-          <a href="#" class="btn btn-outline-secondary btn-lg">Link</a>
-          <a href="#" class="btn btn-outline-secondary btn-lg">Link</a>
-        </nav>
-      </div>
-    </div>
-  </div>
-</section>
 
       </div>
     </main>

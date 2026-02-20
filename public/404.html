@@ -34,14 +34,14 @@
           <span class="small fw-semibold text-body-secondary ms-2 d-none d-lg-inline">the Book of Jack</span>
         </a>
 
-        <!-- Start Here -->
+        <!-- Menu -->
         <button
           class="btn btn-outline-secondary btn-sm d-none d-md-inline-flex"
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbarDark">
           <span class="navbar-toggler-icon"></span>
-          <span class="ms-2">Start Here</span>
+          <span class="ms-2">Menu</span>
         </button>
 
         <!-- Gallery (desktop text) -->
@@ -145,77 +145,91 @@
       Table of Contents
       ========================= -->
 
-  <!-- Offcanvas Panel -->
+  <!-- Offcanvas: The Book of Jack -->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel">
-  <div class="offcanvas-header">
-    <h4 class="offcanvas-title" id="offcanvasNavbarDarkLabel">Table of Contents</h4>
+
+  <!-- Header -->
+  <div class="offcanvas-header border-bottom">
+    <div>
+      <div class="text-uppercase small text-body-secondary">The Book of</div>
+      <h4 class="offcanvas-title mb-0" id="offcanvasNavbarDarkLabel">Jack</h4>
+    </div>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  
+
+  <!-- Body -->
   <div class="offcanvas-body">
-    <h5>Front Matter</h5>
-    <ul class="navbar-nav">
+
+    <!-- I. Foundations -->
+    <h6 class="mt-4 mb-2 text-uppercase small fw-semibold text-body-secondary">
+      I — Foundations
+    </h6>
+
+    <ul class="nav flex-column mb-3">
       <li class="nav-item">
-        <a href="/jacks/jack-origins/" class="nav-link  px-2">
+        <a href="/jacks/jack-origins/"
+           class="nav-link ">
           Origins
         </a>
       </li>
       <li class="nav-item">
-        <a href="/jacks/about/" class="nav-link  px-2">
+        <a href="/jacks/about/"
+           class="nav-link ">
           About
         </a>
       </li>
       <li class="nav-item">
-        <a href="/jacks/copyright/" class="nav-link  px-2">
+        <a href="/jacks/copyright/"
+           class="nav-link ">
           Copyright
         </a>
       </li>
     </ul>
 
-    <h5>The Letter J</h5>
-    <ul class="navbar-nav">
+    <!-- II. The Letter -->
+    <h6 class="mt-4 mb-2 text-uppercase small fw-semibold text-body-secondary">
+      II — The Letter
+    </h6>
+
+    <ul class="nav flex-column mb-3">
       <li class="nav-item">
-      <a href="/jacks/wadi-el-hol/"
-          class="nav-link  px-2">
-        Wadi El-Hol
-      </a>
-      <a href="/jacks/gallery/"
-        class="btn btn-outline-secondary btn-sm d-none d-md-inline-flex">
-        Gallery
-      </a>
+        <a href="/jacks/wadi-el-hol/"
+           class="nav-link ">
+          Wadi El-Hol
+        </a>
       </li>
     </ul>
 
-    <h5>Food and Drink</h5>
-    <ul class="navbar-nav">
+    <!-- III. Embodiments -->
+    <h6 class="mt-4 mb-2 text-uppercase small fw-semibold text-body-secondary">
+      III — Embodiments
+    </h6>
+
+    <ul class="nav flex-column mb-3">
       <li class="nav-item">
-      <a href="/jacks/cracker-jack/"
-          class="nav-link  px-2">
-        Cracker Jack
-      </a>
+        <a href="/jacks/cracker-jack/"
+           class="nav-link ">
+          Cracker Jack
+        </a>
       </li>
     </ul>
 
-    <h5>Media</h5>
-    <ul class="navbar-nav">
+    <!-- IV. Myth & Media -->
+    <h6 class="mt-4 mb-2 text-uppercase small fw-semibold text-body-secondary">
+      IV — Myth & Media
+    </h6>
+
+    <ul class="nav flex-column mb-3">
       <li class="nav-item">
         <a href="/jacks/jack-in-pop-culture/"
-           class="nav-link  px-2">
+           class="nav-link ">
           Jack in Pop Culture
         </a>
       </li>
     </ul>
+
   </div>
-  
 </div>
-
-<!-- Filter/Sort Options: For data-heavy pages like product listings or search results, 
- an offcanvas can hold complex filtering and sorting options that are hidden until needed, 
- improving the main layout's clarity. 
- 
- This site would probably need 50 sepearte entries to need a filter/sort feature. -->
-
-
 
 
     <main class="flex-grow-1 px-3">
@@ -256,17 +270,22 @@
   
     
 
+
   
-    Table of Contents
+  
+    
+      The Book of
+      Jack
+    
     
   
+
   
   
-    Front Matter
+
     
-      
-        
-          ...
+    
+      I — Found...
             </p>
             <a href="/jacks/copyright/" class="btn btn-outline-primary btn-sm">Go</a>
           </div>
@@ -280,13 +299,6 @@
             <p class="card-text text-truncate">
               
 
-  
-    
-      
-        
-          
-          
-            Candied popcorn and peanuts rebranded...
             </p>
             <a href="/jacks/cracker-jack/" class="btn btn-outline-primary btn-sm">Go</a>
           </div>
@@ -299,19 +311,7 @@
             <h5 class="card-title">Gallery</h5>
             <p class="card-text text-truncate">
               
-  
-    
-    
-      Gallery Title
-      sub title
-      
-    
-    
-    
-      
-      
-        
-  ...
+
             </p>
             <a href="/jacks/gallery/" class="btn btn-outline-primary btn-sm">Go</a>
           </div>
@@ -321,14 +321,18 @@
       <div class="col">
         <div class="card h-100 shadow-sm">
           <div class="card-body">
-            <h5 class="card-title">Home</h5>
+            <h5 class="card-title">The Book of Jack</h5>
             <p class="card-text text-truncate">
               
   
     
       
       
-        A large 17th-century library part of the Museum Plantin-Moretus.  ...
+        
+          A Study in Origins, Symbol, and Myth
+        
+        
+...
             </p>
             <a href="/jacks/" class="btn btn-outline-primary btn-sm">Go</a>
           </div>

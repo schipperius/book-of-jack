@@ -1,70 +1,85 @@
-<!-- Offcanvas Panel -->
+<!-- Offcanvas: The Book of Jack -->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel">
-  <div class="offcanvas-header">
-    <h4 class="offcanvas-title" id="offcanvasNavbarDarkLabel">Table of Contents</h4>
+
+  <!-- Header -->
+  <div class="offcanvas-header border-bottom">
+    <div>
+      <div class="text-uppercase small text-body-secondary">The Book of</div>
+      <h4 class="offcanvas-title mb-0" id="offcanvasNavbarDarkLabel">Jack</h4>
+    </div>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  
+
+  <!-- Body -->
   <div class="offcanvas-body">
-    <h5>Front Matter</h5>
-    <ul class="navbar-nav">
+
+    <!-- I. Foundations -->
+    <h6 class="mt-4 mb-2 text-uppercase small fw-semibold text-body-secondary">
+      I — Foundations
+    </h6>
+
+    <ul class="nav flex-column mb-3">
       <li class="nav-item">
-        <a href="{{ '/jack-origins/' | relative_url }}" class="nav-link {% if page.url contains '/jack-origins' %}active{% endif %} px-2">
+        <a href="{{ '/jack-origins/' | relative_url }}"
+           class="nav-link {% if page.url contains '/jack-origins' %}active fw-medium{% endif %}">
           Origins
         </a>
       </li>
       <li class="nav-item">
-        <a href="{{ '/about/' | relative_url }}" class="nav-link {% if page.url contains '/about' %}active{% endif %} px-2">
+        <a href="{{ '/about/' | relative_url }}"
+           class="nav-link {% if page.url contains '/about' %}active fw-medium{% endif %}">
           About
         </a>
       </li>
       <li class="nav-item">
-        <a href="{{ '/copyright/' | relative_url }}" class="nav-link {% if page.url contains '/copyright' %}active{% endif %} px-2">
+        <a href="{{ '/copyright/' | relative_url }}"
+           class="nav-link {% if page.url contains '/copyright' %}active fw-medium{% endif %}">
           Copyright
         </a>
       </li>
     </ul>
 
-    <h5>The Letter J</h5>
-    <ul class="navbar-nav">
+    <!-- II. The Letter -->
+    <h6 class="mt-4 mb-2 text-uppercase small fw-semibold text-body-secondary">
+      II — The Letter
+    </h6>
+
+    <ul class="nav flex-column mb-3">
       <li class="nav-item">
-      <a href="{{ '/wadi-el-hol/' | relative_url }}"
-          class="nav-link {% if page.url contains '/wadi-el-hol' %}active{% endif %} px-2">
-        Wadi El-Hol
-      </a>
-      <a href="{{ '/gallery/' | relative_url }}"
-        class="btn btn-outline-secondary btn-sm d-none d-md-inline-flex">
-        Gallery
-      </a>
+        <a href="{{ '/wadi-el-hol/' | relative_url }}"
+           class="nav-link {% if page.url contains '/wadi-el-hol' %}active fw-medium{% endif %}">
+          Wadi El-Hol
+        </a>
       </li>
     </ul>
 
-    <h5>Food and Drink</h5>
-    <ul class="navbar-nav">
+    <!-- III. Embodiments -->
+    <h6 class="mt-4 mb-2 text-uppercase small fw-semibold text-body-secondary">
+      III — Embodiments
+    </h6>
+
+    <ul class="nav flex-column mb-3">
       <li class="nav-item">
-      <a href="{{ '/cracker-jack/' | relative_url }}"
-          class="nav-link {% if page.url contains '/cracker-jack' %}active{% endif %} px-2">
-        Cracker Jack
-      </a>
+        <a href="{{ '/cracker-jack/' | relative_url }}"
+           class="nav-link {% if page.url contains '/cracker-jack' %}active fw-medium{% endif %}">
+          Cracker Jack
+        </a>
       </li>
     </ul>
 
-    <h5>Media</h5>
-    <ul class="navbar-nav">
+    <!-- IV. Myth & Media -->
+    <h6 class="mt-4 mb-2 text-uppercase small fw-semibold text-body-secondary">
+      IV — Myth & Media
+    </h6>
+
+    <ul class="nav flex-column mb-3">
       <li class="nav-item">
         <a href="{{ '/jack-in-pop-culture/' | relative_url }}"
-           class="nav-link {% if page.url contains '/jack-in-pop-culture' %}active{% endif %} px-2">
+           class="nav-link {% if page.url contains '/jack-in-pop-culture' %}active fw-medium{% endif %}">
           Jack in Pop Culture
         </a>
       </li>
     </ul>
+
   </div>
-  
 </div>
-
-<!-- Filter/Sort Options: For data-heavy pages like product listings or search results, 
- an offcanvas can hold complex filtering and sorting options that are hidden until needed, 
- improving the main layout's clarity. 
- 
- This site would probably need 50 sepearte entries to need a filter/sort feature. -->
-
