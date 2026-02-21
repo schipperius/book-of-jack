@@ -10,26 +10,12 @@ permalink: /404.html
     The page you’re looking for doesn’t exist. Don’t worry, you’re still on our site!
   </p>
 
-  <a href="{{ '/' | relative_url }}" class="btn btn-primary btn-lg mb-5">
-    Return Home
+  <a href="{{ '/' | relative_url }}" class="btn btn-outline-secondary btn-lg mb-5"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#offcanvasNavbarDark"
+    >
+    <span class="navbar-toggler-icon"></span>
+    <span class="ms-2">Menu</span>
   </a>
-
-  <h2 class="h5 mb-4">Try one of these pages:</h2>
-  <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
-    {% assign available_pages = site.pages | where_exp: "p", "p.title" | where_exp: "p", "p.url != '/404.html'" | shuffle %}
-    {% for page in available_pages limit:6 %}
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">{{ page.title }}</h5>
-            <p class="card-text text-truncate">
-              {{ page.excerpt | strip_html | truncate: 100 }}
-            </p>
-            <a href="{{ page.url | relative_url }}" class="btn btn-outline-primary btn-sm">Go</a>
-          </div>
-        </div>
-      </div>
-    {% endfor %}
-  </div>
 </div>
 
