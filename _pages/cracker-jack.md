@@ -3,7 +3,6 @@ layout: hero
 title: "Cracker Jack"
 permalink: /cracker-jack/
 node: cracker-jack
-
 categories: [Food and Drink, Anthologies]
 tags:
   - etymology 

@@ -3,7 +3,6 @@ layout: home
 supra: the
 title: Book of Jack
 node: home
-
 categories: [Origins, Anthologies]
 tags:
   - etymology 
