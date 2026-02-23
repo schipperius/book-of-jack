@@ -24,10 +24,10 @@
       url: "#cultural-impact"
 
 - id: lumber-jack
-  title: "Lumber Jack"
+  title: "Lumberjack"
   url: "/lumber-jack/"
   description: "A legendary figure in North American folklore, the Lumber Jack is known for his strength, skill, and adventures in the great forests. His stories celebrate the spirit of the woodsmen who shaped the land."
-  image: "/assets/img/boj-open-book.jpg"
+  image: "/assets/img/lumber-jack.jpg"
   alt: "Lumber Jack in the forest"
   caption: "The Lumber Jack embodies the rugged life and folklore of North American woodsmen."
   links:

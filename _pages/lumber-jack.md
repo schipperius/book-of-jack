@@ -1,6 +1,6 @@
 ---
 layout: hero
-title: "Lumber Jack"
+title: "Lumberjack"
 permalink: /lumber-jack/
 node: lumber-jack
 

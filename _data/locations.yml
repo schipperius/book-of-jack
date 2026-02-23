@@ -14,6 +14,7 @@
   description: Emergence of Jacques in Old French.
   link: /jacques/
 
+- id: london-jack
   name: London
   lat: 51.5074
   lng: -0.1278
@@ -28,3 +29,5 @@
   category: modern
   description: Legendary woodsman of North American folklore.
   link: /lumber-jack/
+
+  
