@@ -1,0 +1,23 @@
+- section: "I — INTRODUCTION"
+  items:
+    - title: About
+      url: /about/
+
+- section: "II — The Letter J"
+  items:
+    - title: Wadi El-Hol
+      url: /wadi-el-hol/
+
+- section: "III — FOOD & WORK"
+  subsection:
+    - title: Food
+      items:
+      - title: Cracker Jack
+        url: /cracker-jack/
+      - title: Lumber Jack
+        url: /lumber-jack/
+
+- section: "IV — Myth & Media"
+  items:
+    - title: Jack in Pop Culture
+      url: /jack-in-pop-culture/

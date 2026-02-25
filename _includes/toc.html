@@ -13,79 +13,24 @@
   <!-- Body -->
   <div class="offcanvas-body">
 
-    <!-- I. Foundations -->
-    <h6 class="mt-4 mb-2 text-uppercase small fw-semibold text-body-secondary">
-      I — Foundations
-    </h6>
+    {% for section in site.data.toc %}
+      <!-- Section Heading -->
+      <h6 class="mt-4 mb-2 text-uppercase small fw-semibold text-body-secondary">
+        {{ section.section }}
+      </h6>
 
-    <ul class="nav flex-column mb-3">
-      <li class="nav-item">
-        <a href="{{ '/jack-origins/' | relative_url }}"
-           class="nav-link {% if page.url contains '/jack-origins' %}active fw-medium{% endif %}">
-          Origins
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="{{ '/about/' | relative_url }}"
-           class="nav-link {% if page.url contains '/about' %}active fw-medium{% endif %}">
-          About
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="{{ '/copyright/' | relative_url }}"
-           class="nav-link {% if page.url contains '/copyright' %}active fw-medium{% endif %}">
-          Copyright
-        </a>
-      </li>
-    </ul>
-
-    <!-- II. The Letter -->
-    <h6 class="mt-4 mb-2 text-uppercase small fw-semibold text-body-secondary">
-      II — The Letter
-    </h6>
-
-    <ul class="nav flex-column mb-3">
-      <li class="nav-item">
-        <a href="{{ '/wadi-el-hol/' | relative_url }}"
-           class="nav-link {% if page.url contains '/wadi-el-hol' %}active fw-medium{% endif %}">
-          Wadi El-Hol
-        </a>
-      </li>
-    </ul>
-
-    <!-- III. Embodiments -->
-    <h6 class="mt-4 mb-2 text-uppercase small fw-semibold text-body-secondary">
-      III — Embodiments
-    </h6>
-
-    <ul class="nav flex-column mb-3">
-      <li class="nav-item">
-        <a href="{{ '/cracker-jack/' | relative_url }}"
-           class="nav-link {% if page.url contains '/cracker-jack' %}active fw-medium{% endif %}">
-          Cracker Jack
-        </a>
-      </li>
-        <li class="nav-item">
-          <a href="{{ '/lumber-jack/' | relative_url }}"
-             class="nav-link {% if page.url contains '/lumber-jack' %}active fw-medium{% endif %}">
-            Lumber Jack
-          </a>
-        </li>
-    </ul>
-
-    <!-- IV. Myth & Media -->
-    <h6 class="mt-4 mb-2 text-uppercase small fw-semibold text-body-secondary">
-      IV — Myth & Media
-    </h6>
-
-    <ul class="nav flex-column mb-3">
-      <li class="nav-item">
-        <a href="{{ '/jack-in-pop-culture/' | relative_url }}"
-           class="nav-link {% if page.url contains '/jack-in-pop-culture' %}active fw-medium{% endif %}">
-          Jack in Pop Culture
-        </a>
-      </li>
-    </ul>
+      <!-- Section Items -->
+      <ul class="nav flex-column mb-3">
+        {% for item in section.items %}
+          <li class="nav-item">
+            <a href="{{ item.url | relative_url }}"
+               class="nav-link {% if page.url contains item.url %}active fw-medium{% endif %}">
+              {{ item.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
 
   </div>
 </div>
