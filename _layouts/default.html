@@ -3,14 +3,16 @@
   {% include head.html %}
   <body class="d-flex flex-column min-vh-100">
     <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/auto-close-offcanvas.js' | relative_url }}"></script>    
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="{{ '/assets/js/auto-close-offcanvas.js' | relative_url }}"></script>   
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> 
     {% include navbar.html %}
-    <main class="flex-grow-1">
-      {{ content }}
-    </main>
+    <div class="d-flex flex-row flex-grow-1" style="min-height:0;">
+      {% include sidebar.html %}
+      <main class="flex-grow-1">
+        {{ content }}
+      </main>
+    </div>
     {% include footer.html %}
     <script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
   </body>
 </html>
-
