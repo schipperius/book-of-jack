@@ -8,7 +8,7 @@ permalink: /map/
 
 <script>
   window.storyLocations = [
-    {% for story in site.pages %}
+    {% for story in site.stories %}
       {% if story.lat and story.lng %}
         {
           id: "{{ story.id }}",

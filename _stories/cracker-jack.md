@@ -1,15 +1,19 @@
 ---
+# Narrative layer
 layout: lead-section
 title: "Cracker Jack"
 permalink: /cracker-jack/
-node: cracker-jack
-categories: [Food and Drink, Anthologies]
+
+description: > 
+  A mixture of molasses-flavored candy-coated popcorn and peanuts that was sold for the first time at the World's Columbian Exposition in 1893.
+image: /assets/img/stories/cracker-jack.jpg
+image-alt: 
+
+categories: 
 tags:
-  - etymology 
-  - origin
-  - location
-  - time
-  - narrative
+
+
+# Object layer 
 id: cracker-jack
 name: Cracker Jack
 lat: 41.8781
