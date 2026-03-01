@@ -1,0 +1,13 @@
+- id: cracker-jack
+  title: "Cracker Jack"
+  url: "/cracker-jack/"
+  description: "A classic sweet snack of caramel-flavoured popcorn mixed with roasted peanuts, known for its nostalgic association with fairs and baseball."
+  image: "/assets/img/cracker-jack.jpg"
+  alt: "Cracker Jack packaging from the late 19th century"
+  caption: "Candied popcorn and peanuts rebranded as Cracker Jack in 1896."
+  links:
+    - label: "History"
+      url: "#history"
+    - label: "Cultural Impact"
+      url: "#cultural-impact"
+      

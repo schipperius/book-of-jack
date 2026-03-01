@@ -11,6 +11,16 @@ tags:
   - location
   - time
   - narrative
+
+id: wadi-el-hol
+name: Wadi el-Hol
+lat: 25.93
+lng: 32.44
+category: origins
+description: Early Proto-Sinaitic inscriptions.
+link: /wadi-el-hol/
+
+
 ---
 
 <!-- Hero section pulled in with hero layout -->

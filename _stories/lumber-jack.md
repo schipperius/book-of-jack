@@ -11,6 +11,14 @@ tags:
   - occupation
   - story
   - jack
+
+id: lumber-jack
+name: Lumberjack
+lat: 49.2827
+lng: -123.1207
+category: modern
+description: Legendary woodsman of North American folklore.
+link: /lumber-jack/
 ---
 
 <!-- Hero section pulled in with hero layout -->

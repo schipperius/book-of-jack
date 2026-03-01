@@ -49,7 +49,7 @@ plugins:
 collections:
   pages:
     output: true
-  articles:
+  stories:
     output: true
     permalink: /:name/
 

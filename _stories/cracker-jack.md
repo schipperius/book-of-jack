@@ -10,6 +10,13 @@ tags:
   - location
   - time
   - narrative
+id: cracker-jack
+name: Cracker Jack
+lat: 41.8781
+lng: -87.6298
+category: food
+description: Classic sweet snack associated with fairs and baseball, originated in Chicago.
+
 ---
 
 <!-- _layouts/lead-section pulls _includes/lead-section -->

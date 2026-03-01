@@ -4,22 +4,34 @@ layout: default
 
 {% comment %}
   Dedicated layout for Jack entries:
-  - Pulls lead section automatically from site.data.gallery
+  - Pulls lead section automatically from site.data.notes
   - Renders page content from lead-section
 {% endcomment %}
 
-{% assign item = site.data.articles | where: "id", page.node | first %}
-
-{% if item %}
-  {% include lead-section.html
-     image=item.image
-     alt=item.alt
-     caption=item.caption
-     title=item.title
-     description=item.description
-     links=item.links
-  %}
+{% comment %} 1. Safely flatten the data only if it exists {% endcomment %}
+{% if site.data.stories %}
+  {% assign all_stories = "" | split: "" %}
+  {% for story_file in site.data.stories %}
+    {% assign all_stories = all_stories | concat: story_file[1] %}
+  {% endfor %}
+  {% assign stories = all_stories | where: "id", page.node | first %}
 {% endif %}
+
+{% comment %} 2. Only run the include if 'stories' actually contains data {% endcomment %}
+{% if stories %}
+  {% include lead-section.html
+     image=stories.image
+     alt=stories.alt
+     caption=stories.caption
+     title=stories.title
+     description=stories.description
+     links=stories.links
+  %}
+
+{% else %}
+  <!-- No story found for node: {{ page.node }} -->
+{% endif %}
+
 
 <!-- Brings in content below the lead section -->
 <main class="container my-4 flex-fill">

@@ -1,0 +1,18 @@
+- id: lumber-jack
+  title: "Lumberjack"
+  url: "/lumber-jack/"
+  description: "A legendary figure in North American folklore, the Lumber Jack is known for his strength, skill, and adventures in the great forests. His stories celebrate the spirit of the woodsmen who shaped the land."
+  image: "/assets/img/lumber-jack.jpg"
+  alt: "Lumber Jack in the forest"
+  caption: "The Lumber Jack embodies the rugged life and folklore of North American woodsmen."
+  links:
+    - label: "Folklore"
+      url: "#folklore"
+    - label: "Stories"
+      url: "#stories"
+  location:
+    name: Lumberjack
+    lat: 49.2827
+    lng: -123.1207
+    category: modern
+    description: Legendary woodsman of North American folklore.

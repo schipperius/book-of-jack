@@ -1,0 +1,12 @@
+- id: steeplejack
+  title: "Steeplejack"
+  url: "/steeplejack/"
+  description: "The Bayeux Tapestry is a famous piece of medieval art. One of the embroidered panels depicts King Edward’s funeral procession to Westminster Abby. Scaling the roof of this church while clutching a weather vane is a man that would later become known professionally as a Steeplejack."
+  image: "/assets/img/tapisserie-de-bayeux.png"
+  alt: "Steeple climber working on the Westminster Abbey roof as depicted in the Tapisserie de Bayeux."
+  caption: "Embroidered onto the Tapisserie de Bayeux is a steeple climber on top of Westminster Abbey."
+  links:
+    - label: "History"
+      url: "#history"
+    - label: "Cultural Impact"
+      url: "#cultural-impact"
