@@ -122,3 +122,25 @@
     padding-right: 0.5rem;
   }
 }
+
+
+/* Sidebar adjustments */
+.nav-link.btn-link {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-link.btn-link:hover {
+  background-color: #e9ecef; /* subtle hover background */
+  color: #000; /* optional: make text darker on hover */
+}
+
+.nav-link.btn-link.active {
+  background-color: #0d6efd; /* Bootstrap primary */
+  color: #fff;
+  font-weight: 500;
+}

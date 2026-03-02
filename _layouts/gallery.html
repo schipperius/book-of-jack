@@ -14,20 +14,22 @@ layout: default
     <!-- Card Grid -->
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
-      {% for story_file in site.data.stories %}
-        {% for story in story_file[1] %}
-          <div class="col">
-            <div class="card h-100">
-              <a href="{{ story.url | relative_url }}" class="text-decoration-none text-dark">
-                <img src="{{ story.image | relative_url }}" class="card-img-top" alt="{{ story.alt }}">
-              </a>
-              <div class="card-body">
-                <h5 class="card-title">{{ story.title }}</h5>
-                <p class="card-text">{{ story.description }}</p>
-              </div>
+      {% for story in site.stories %}
+        <div class="col">
+          <div class="card h-100">
+            <a href="{{ story.url | relative_url }}" class="text-decoration-none text-dark">
+              {% if story.image %}
+                <img src="{{ story.image | relative_url }}" 
+                    class="card-img-top" 
+                    alt="{{ story.alt | default: story.title }}">
+              {% endif %}
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">{{ story.title }}</h5>
+              <p class="card-text">{{ story.description }}</p>
             </div>
           </div>
-        {% endfor %}
+        </div>
       {% endfor %}
 
     </div>

@@ -2,15 +2,15 @@
 layout: lead-section
 title: "Lumberjack"
 permalink: /lumber-jack/
-node: lumber-jack
 
-categories: [Folklore, Occupations]
+description: > 
+  A mixture of molasses-flavored candy-coated popcorn and peanuts that was sold for the first time at the World's Columbian Exposition in 1893.
+image: /assets/img/stories/lumber-jack.jpg
+image-alt: 
+
+categories: 
 tags:
-  - lumberjack
-  - folklore
-  - occupation
-  - story
-  - jack
+
 
 id: lumber-jack
 name: Lumberjack

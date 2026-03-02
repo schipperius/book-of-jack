@@ -1,44 +1,64 @@
 <!-- Sidebar for desktop (md and up) -->
-<aside class="d-none d-md-block bg-body border-end" style="width:260px; overflow:auto;">
-  <div class="p-3 overflow-auto h-85vh">
+<div class="bg-body" style="width: 260px;">
+  <div class="position-sticky top-0 vh-100 overflow-auto p-3">
+
     <!-- Sidebar header -->
     <div class="mb-4">
       <div class="text-uppercase small text-body-secondary">The Book of</div>
       <h4 class="mb-0">Jack</h4>
     </div>
-    <!-- Sidebar body: same TOC as offcanvas -->
-    {% for section in site.data.toc %}
-      <h6 class="mt-4 mb-2 text-uppercase small fw-semibold text-body-secondary">
-        {{ section.section }}
-      </h6>
-      {% if section.subsections %}
-        {% for sub in section.subsections %}
-          <h6 class="mt-2 mb-1 small fw-semibold text-body-secondary">
-            {{ sub.title }}
-          </h6>
-          <ul class="nav flex-column mb-3">
-            {% for item in sub.items %}
-              <li class="nav-item">
-                <a href="{{ item.url | relative_url }}"
-                  class="nav-link {% if page.url contains item.url %}active fw-medium{% endif %}">
-                  {{ item.title }}
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        {% endfor %}
-      {% else %}
-        <ul class="nav flex-column mb-3">
-          {% for item in section.items %}
-            <li class="nav-item">
-              <a href="{{ item.url | relative_url }}"
-                class="nav-link {% if page.url contains item.url %}active fw-medium{% endif %}">
-                {{ item.title }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-    {% endfor %}
+
+    <!-- Sidebar body -->
+
+    <!-- 1. Introduction -->
+    <h6 class="mt-4 mb-2 text-uppercase small text-body-secondary">Introduction</h6>
+    <ul class="nav flex-column mb-3">
+      <li class="nav-item">
+        <a href="{{ '/wadi-el-hol/' | relative_url }}"
+           class="nav-link btn-link {% if page.url contains 'wadi-el-hol' %}active{% endif %}">
+          Wadi-el-Hol
+        </a>
+      </li>
+    </ul>
+
+    <!-- 2. The Labourer -->
+    <h6 class="mt-4 mb-2 text-uppercase small text-body-secondary">The Labourer</h6>
+    <ul class="nav flex-column mb-3">
+      <li class="nav-item">
+        <a href="{{ '/lumber-jack/' | relative_url }}"
+           class="nav-link btn-link {% if page.url contains 'lumber-jack' %}active{% endif %}">
+          Lumber Jack
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="{{ '/steeplejack/' | relative_url }}"
+           class="nav-link btn-link {% if page.url contains 'steeplejack' %}active{% endif %}">
+          Steeplejack
+        </a>
+      </li>
+    </ul>
+
+    <!-- 3. Food and Drink -->
+    <h6 class="mt-4 mb-2 text-uppercase small text-body-secondary">Food and Drink</h6>
+    <ul class="nav flex-column mb-3">
+      <li class="nav-item">
+        <a href="{{ '/cracker-jack/' | relative_url }}"
+           class="nav-link btn-link {% if page.url contains 'cracker-jack' %}active{% endif %}">
+          Cracker Jack
+        </a>
+      </li>
+    </ul>
+
+    <!-- 4. Last section (keep as before) -->
+    <h6 class="mt-4 mb-2 text-uppercase small text-body-secondary">Other</h6>
+    <ul class="nav flex-column mb-3">
+      <li class="nav-item">
+        <a href="{{ '/other-link/' | relative_url }}"
+           class="nav-link btn-link {% if page.url contains 'other-link' %}active{% endif %}">
+          Other
+        </a>
+      </li>
+    </ul>
+
   </div>
-</aside>
+</div>

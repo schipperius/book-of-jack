@@ -2,15 +2,16 @@
 layout: lead-section
 title: "Wadi el-Hol"
 permalink: /wadi-el-hol/
-node: wadi-el-hol
 
-categories: [Origins, Anthologies]
+description: > 
+  A mixture of molasses-flavored candy-coated popcorn and peanuts that was sold for the first time at the World's Columbian Exposition in 1893.
+image: /assets/img/stories/wadi-el-hol.png
+image-alt: 
+
+categories: 
 tags:
-  - etymology 
-  - origin
-  - location
-  - time
-  - narrative
+
+
 
 id: wadi-el-hol
 name: Wadi el-Hol

@@ -1,5 +1,4 @@
 ---
-# Narrative layer
 layout: lead-section
 title: "Cracker Jack"
 permalink: /cracker-jack/

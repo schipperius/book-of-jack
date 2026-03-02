@@ -2,7 +2,15 @@
 layout: lead-section
 title: "Steeplejack"
 permalink: /steeplejack/
-node: steeplejack
+
+description: > 
+  A mixture of molasses-flavored candy-coated popcorn and peanuts that was sold for the first time at the World's Columbian Exposition in 1893.
+image: /assets/img/stories/tapisserie-de-bayeux.png
+image-alt: 
+
+categories: 
+tags:
+
 id: steeplejack
 name: Westminster Abbey
 lat: 51.4993
