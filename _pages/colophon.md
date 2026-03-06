@@ -1,21 +1,20 @@
 ---
-# Global Block
 layout: page
 title: "Colophon"
 permalink: /colophon/
 
-
-text: # Text Block
+text: 
   description: >  
-    A mixture of molasses-flavored candy-coated popcorn and peanuts that was sold for the first time at the World's Columbian Exposition in 1893.
+    The word colophon originates from the Greek κολοϕών or kolophōn, meaning summit, pinnacle, ‘finishing stroke' or ‘crowning touch.’
+  description-two: >
+    It is the closing statement traditionally included at the end of a book, written by a manuscript's scribe. Today, it's essentially a place for metadata about a document's production.
   lead:
   excerpt:
 
-media:
 image:
-  path: /assets/img/pages/scribe-at-work.jpg
-  alt: Delicious sweet treat # Alternative text provides a text description of an image for screen readers ensuring compliance with accessibility standards
-  caption: # A custom variable used to store descriptive text for an image, video or table
+  path: /assets/img/pages/tavernier-jean-mielot.jpg
+  alt: An author portrait of Jean Miélot writing his compilation of the Miracles of Our Lady, one of his many popular works. The setting is probably the ducal library. Bibliothèque Nationale de France, Paris. # Alternative text provides a text description of an image for screen readers ensuring compliance with accessibility standards
+  caption: An author portrait of Jean Miélot writing his compilation of the Miracles of Our Lady, one of his many popular works. The setting is probably the ducal library. Bibliothèque Nationale de France, Paris. # A custom variable used to store descriptive text for an image, video or table
   credit: # Owner of image
   source: # A link to the original archive or museum page
   width: # Constrained width
@@ -26,11 +25,10 @@ seo:
   type: article
   keywords: [Chicago, candy]
 
-# Taxonomies / Navigation Block
 categories: []
 tags: []
 
-map: # Map Block
+map: 
   coordinates: [41.8781, -87.6298]
   modern-name: # The name: might be "Constantinople," but it's helpful to have a variable for the current city name ("Istanbul") for searchability
   display:
@@ -41,11 +39,15 @@ map: # Map Block
     zoom-level: # If the specific location is a tiny city, you might want the map to zoom in closer (15) than if it’s a vast empire (4)
     location-accuracy: # In history, we don't always know exactly where something happened. You could use values like precise, approximate, or legendary
 
-timeline: # Timeline Block
+timeline: 
   sort-year: -1780
   display:
     year: "1780 BCE"
     circa: true # Indicates approximate dates
 
+Footnotes:
+  url: https://wiki.ubc.ca/Course:LIBR548F/2012WT1/Colophon#:~:text=Colophon-,Definition,excommunication%20to%20unauthorized%20copiers.%22%20(
+
 ---
+
 
