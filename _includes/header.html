@@ -1,0 +1,82 @@
+<header class="navbar container sticky-top bg-body border-bottom py-2">
+  <!-- Desktop Layout -->
+  <div class="d-none d-md-flex align-items-center w-100">
+    <!-- Left collumn -->
+    <div class="d-flex align-items-center gap-3 flex-shrink-0">
+      <a class="navbar-brand d-flex align-items-center mb-0"
+          href="{{ '/' | relative_url }}">
+        <span class="small text-body-secondary ms-2 d-none d-lg-inline">{{ site.sup }} {{ site.title }}</span>
+      </a>
+      <a href="{{ '/gallery/' | relative_url }}"
+          class="btn btn-outline-secondary btn-sm d-none d-md-inline-flex">
+        <span class="bi bi-images"></span>
+        <span class="ms-2">Gallery</span>
+      </a>
+      <a href="{{ '/map/' | relative_url }}"
+          class="btn btn-outline-secondary btn-sm d-none d-md-inline-flex">
+        <span class="bi bi-map"></span>
+        <span class="ms-2">Map</span>
+      </a>
+    </div>
+    <!-- Center Column (Search) -->
+    <div class="flex-grow-1 d-none d-md-flex justify-content-center">
+      <form class="d-flex" role="search">
+        <input
+          class="form-control form-control-sm me-2"
+          type="search"
+          placeholder="Search">
+        <button class="btn btn-outline-secondary btn-sm">
+          <i class="bi bi-search"></i>
+        </button>
+      </form>
+    </div>
+    <!-- Right Column -->
+    <div class="d-flex align-items-center gap-3 flex-shrink-0">
+      <!-- Theme Toggle Button-->
+      <div class="dropdown d-none d-md-block">
+        <button class="btn btn-outline-secondary btn-sm dropdown-toggle"
+                data-bs-toggle="dropdown">
+          Theme
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><button class="dropdown-item" data-bs-theme-value="light">☀ Light</button></li>
+          <li><button class="dropdown-item" data-bs-theme-value="dark">🌙 Dark</button></li>
+          <li><button class="dropdown-item" data-bs-theme-value="auto">⚙ Auto</button></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile Layout -->
+  <div class="d-flex d-md-none align-items-center w-100">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center mb-0 flex-shrink-0"
+      href="{{ '/' | relative_url }}">
+      <span class="small text-body-secondary ms-2">{{ site.sup }} {{ site.title }}</span>
+    </a>
+    <!-- Icon Row -->
+    <div class="d-flex flex-grow-1 justify-content-evenly">
+      <a href="{{ '/gallery/' | relative_url }}"
+        class="btn btn-outline-secondary btn-sm">
+        <i class="bi bi-images"></i>
+      </a>
+      <a href="{{ '/map/' | relative_url }}"
+        class="btn btn-outline-secondary btn-sm">
+        <i class="bi bi-map"></i>
+      </a>
+      <button class="btn btn-outline-secondary btn-sm">
+        <i class="bi bi-search"></i>
+      </button>
+      <div class="dropdown">
+        <button class="btn btn-outline-secondary btn-sm"
+                data-bs-toggle="dropdown">
+          <i class="bi bi-palette"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><button class="dropdown-item" data-bs-theme-value="light">☀ Light</button></li>
+          <li><button class="dropdown-item" data-bs-theme-value="dark">🌙 Dark</button></li>
+          <li><button class="dropdown-item" data-bs-theme-value="auto">⚙ Auto</button></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>

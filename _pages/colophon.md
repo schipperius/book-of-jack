@@ -4,10 +4,10 @@ title: "Colophon"
 permalink: /colophon/
 
 text: 
-  description: >  
-    The word colophon originates from the Greek κολοϕών or kolophōn, meaning summit, pinnacle, ‘finishing stroke' or ‘crowning touch.’
+  description: > 
+    The book of jack was initially conceived as a ‘Coffee Table’ book. It was September 1994, the Internet was still in its infancy. 
   description-two: >
-    It is the closing statement traditionally included at the end of a book, written by a manuscript's scribe. Today, it's essentially a place for metadata about a document's production.
+    Connection was through a 56K modem, with speeds noticeably slower than 56 kbits/sec, web pages were static HTML tables and there were only about 10,000 websites worldwide!
   lead:
   excerpt:
 

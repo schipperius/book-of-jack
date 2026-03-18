@@ -1,27 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
-  
   {% include head.html %}
   <body class="d-flex flex-column min-vh-100">
     <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/auto-close-offcanvas.js' | relative_url }}"></script>   
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> 
-    
-    {% include navbar.html %}
-    
+    {% include header.html %}
     <div class="container flex-grow-1" style="min-height:0;">
       <div class="row h-100">
-
-        <!-- Sidebar -->
-        <aside class="col-auto d-none d-md-block">
-          {% include sidebar.html %}
-        </aside>
-
-        <!-- Main -->
         <main class="col">
           {{ content }}
         </main>
-
       </div>
     </div>
     {% include footer.html %}

@@ -1,6 +1,6 @@
 ---
 # Global Block
-layout: story
+layout: about
 title: the Book of Jack
 permalink: /
 
@@ -8,7 +8,7 @@ text: # Text Block
   description: >
     A collection of stories about the origin and development of the alphabetic system through the lens of the letter J, the name Jack and the phonemic sound shift from /j/ to /dʒ/. 
   description-two: >
-    Although the letter J was the last letter to be added to the English alphabet, this story begins almost four thousand years ago on a trade route through the Western desert of Egypt between the ancient cities of Thebes and Hut-sekhem.
+    Although J was the last letter added to the English alphabet, this digital anthology begins almost four thousand years ago on a trade route through the Theban desert between the ancient cities of Thebes and Hiw.
   lead: >
   excerpt: >
 
@@ -49,6 +49,4 @@ timeline: # Timeline Block
     circa: true # Indicates approximate dates
 
 references:
-
 ---
-

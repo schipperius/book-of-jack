@@ -47,6 +47,9 @@ plugins:
 # Collections
 # -----------------------------------------------------------------------------
 collections:
+  episodes:
+    output: true
+    permalink: /:name/
   stories:
     output: true
     permalink: /:name/
