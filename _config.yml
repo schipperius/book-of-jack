@@ -49,19 +49,19 @@ plugins:
 collections:
   parts:
     output: true
-    sort_by: order
+    sort_by: part_number
     sort_order: ascending
-    permalink: /:name/
+    permalink: /parts/:name/
   chapters:
     output: true
-    sort_by: order
+    sort_by: chapter_number
     sort_order: ascending
-    permalink: /:name/
+    permalink: /chapters/:name/
   scenes:
     output: true
     sort_by: scene_number
     sort_order: ascending
-    permalink: /:name/
+    permalink: /scenes/:name/
   stories:
     output: true
     permalink: /:name/

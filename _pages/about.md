@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: about-landing
 title: the Book of Jack
 permalink: /
 sent-1: > 

@@ -1,11 +1,10 @@
-<!-- Chapter Section with list of scenes -->
 <div id="part-1" class="container my-5">
   <div class="row justify-content-center">
     <div class="col-lg-8">
       <div class="card shadow-sm border-0">
         <!-- Chapter Card -->
         <div class="card-header border-bottom-0 pt-4">
-          <h5 class="serif-heading">Chapter I: Trav'ling Thebes-Farshût Line</h5>
+          <h3 class="serif-heading">Chapter I: Trav'ling Thebes-Farshût Line</h5>
         </div>
         <div class="card-body">
           <p class="card-text lead drop-cap">{{ chapters.sent-1 }}
@@ -14,16 +13,37 @@
           </p>
           <p class="card-text lead">{{ chapters.sent-2 }}
             During this time, Egypt was in the middle of it's second golden age,
-            a period renowned for it's literature and the expansion of trade.
-          </p>
-        
+            a period renowned for its art, literature and the expansion of trade.
+          </p>       
           <img src="../assets/images/chapters/qena-bend-map.png" alt="A reconstructed map of the Qena-bend"
           class="rounded shadow-sm" style="width: 352px; height: 352px; object-fit: cover;">
-
+        </div>
         <!-- Scene Navigation Cards second design -->
-        <div class="col-lg-12">
-          <div class="card h-100 scene-nav-card shadow-sm border-0">
-            <a href="{{ scene.url | relative_url }}" class="text-decoration-none text-dark">
+        <div class="list-group list-group-flush px-4 pb-4">
+          <a href="/stories/the-ascent" class="list-group-item list-group-item-action border-0 py-3">
+            <div class="row align-items-center">
+              <div class="col-auto">
+                <img src="../assets/images/scenes/leaving-the-nile-valley.png"
+                  alt="A small caravan leaves the Nile river valley." style="width: 352px; height: 192px; object-fit: cover;"
+                  alt="Ascent thumbnail">
+              </div>
+              <div class="col">
+                <h6 class="text-uppercase mb-1">Scene: the Ascent</h6>
+                <p class="small text-muted mb-0">Carved into the soft limestone cliffs, by Semites some 4000 years ago (during the Middle Kingdom period,
+                2040-1674 BC), it is here, in Egypt's western desert, that we find the first signs of an alphabetic writing system.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <div class="col-lg-10">
+          <div class="card h-100 shadow-sm border-0">
+            <a href="{{ scene.url | relative_url }}" class="text-dark">
               <div class="row g-0">
                 <div class="col-4">
                   <img src="../assets/images/scenes/leaving-the-nile-valley.png" alt="A satellite image of the River Nile"
@@ -57,9 +77,7 @@
             </div>
             <p class="card-text text-muted small mb-0">
               Carved into the soft limestone cliffs, by Semites some 4000 years ago (during the Middle Kingdom period,
-              2040-1674
-              BC),
-              it is here, in Egypt's western desert, that we find the first signs of an alphabetic writing system.
+              2040-1674 BC), it is here, in Egypt's western desert, that we find the first signs of an alphabetic writing system.
               <a href="/stories/the-encampmet" class="link-primary text-decoration-none fw-bold">Read more →</a>
             </p>
           </div>
@@ -81,20 +99,8 @@
             </p>
           </div>
 
-          <div class="list-group list-group-flush px-4 pb-4">
-          <a href="/stories/the-ascent" class="list-group-item list-group-item-action border-0 py-3">
-            <div class="row align-items-center">
-              <div class="col-auto">
-                <img src="assets/images/scenes/leaving-the-nile-valley.png" class="rounded shadow-sm"
-                  style="width: 352px; height: 192px; object-fit: cover;" alt="Ascent thumbnail">
-              </div>
-              <div class="col">
-                <h6 class="text-uppercase mb-1">Scene: the Ascent</h6>
-                <p class="small text-muted mb-0">Standing along an ancient road at the Wadi el-Hol...</p>
-              </div>
-            </div>
-          </a>
-        </div>
+
+
       </div>
     </div>
   </div>
@@ -105,7 +111,7 @@
   <div class="list-group-item py-3 border-0">
     <div class="row g-3 align-items-center chapter-card">
       <div class="col-auto">
-        <img src="assets/images/scenes/leaving-the-nile-valley.png"
+        <img src="../assets/images/scenes/leaving-the-nile-valley.png"
           alt="A small caravan begins the ascent of the Theban Plateau." class="rounded shadow-sm"
           style="width: 100px; height: 100px; object-fit: cover;">
       </div>
@@ -123,7 +129,7 @@
     </div>
     <div class="row g-3 align-items-center chapter-card pt-2">
       <div class="col-auto">
-        <img src="assets/images/chapters/qena-bend-map.png"
+        <img src="../assets/images/chapters/qena-bend-map.png"
           alt="Small caravan crossing the high desert plateau between Thebes and Abydos." class="rounded shadow-sm"
           style="width: 100px; height: 100px; object-fit: cover;">
       </div>

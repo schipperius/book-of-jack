@@ -11,7 +11,7 @@ text: # Text Block
 
 media:
 image:
-  path: /assets/img/stories/tapisserie-de-bayeux.png
+  path: /assets/images/stories/tapisserie-de-bayeux.png
   alt: Steeple climber depicted in the Bayeux Tapestry at Westminster Abbey, London. # Alternative text provides a text description of an image for screen readers ensuring compliance with accessibility standards
   caption: # A custom variable used to store descriptive text for an image, video or table
   credit: # Owner of image

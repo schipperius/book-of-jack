@@ -11,7 +11,7 @@ text: # Text Block
 
 media:
 image:
-  path: /assets/img/stories/cracker-jack.jpg
+  path: /assets/images/stories/cracker-jack.jpg
   alt: Delicious sweet treat # Alternative text provides a text description of an image for screen readers ensuring compliance with accessibility standards
   caption: # A custom variable used to store descriptive text for an image, video or table
   credit: # Owner of image

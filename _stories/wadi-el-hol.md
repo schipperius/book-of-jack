@@ -14,7 +14,7 @@ text: # Text Block
 
 media:
 image:
-  path: /assets/img/stories/wadi-el-hol.png
+  path: /assets/images/stories/wadi-el-hol.png
   alt: # Alternative text provides a text description of an image for screen readers ensuring compliance with accessibility standards
   caption: # A custom variable used to store descriptive text for an image, video or table
   credit: # Owner of image

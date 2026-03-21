@@ -11,7 +11,7 @@ text: # Text Block
 
 media:
 image:
-  path: /assets/img/stories/lumber-jack.jpg
+  path: /assets/images/stories/lumber-jack.jpg
   alt: # Alternative text provides a text description of an image for screen readers ensuring compliance with accessibility standards
   caption: # A custom variable used to store descriptive text for an image, video or table
   credit: # Owner of image
