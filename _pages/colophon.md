@@ -2,87 +2,49 @@
 layout: page
 title: "Colophon"
 permalink: /colophon/
+hero_image_id: da-vinci-workshop # The ID from gallery.csv
 
-text: 
-  description: > 
-    The book of jack was initially conceived as a ‘Coffee Table’ book. It was September 1994, the Internet was still in its infancy. 
-  description-two: >
-    Connection was through a 56K modem, with speeds noticeably slower than 56 that. Web pages consisted of static HTML tables and there were only about 10,000 websites worldwide.
-  lead:
-  excerpt:
-
-image:
-  path: /assets/images/pages/tavernier-jean-mielot.jpg
-  alt: An author portrait of Jean Miélot writing his compilation of the Miracles of Our Lady, one of his many popular works. The setting is probably the Ducal Library. Bibliothèque Nationale de France, Paris. # Alternative text provides a text description of an image for screen readers ensuring compliance with accessibility standards
-  caption: An author portrait of Jean Miélot writing his compilation of the Miracles of Our Lady, one of his many popular works. The setting is probably the Ducal Library. Bibliothèque Nationale de France, Paris. # A custom variable used to store descriptive text for an image, video or table
-  credit: # Owner of image
-  source: # A link to the original archive or museum page
-  width: # Constrained width
-  height: # Constrained height
-  license: # Usage rights
-
-seo:
-  type: article
-  keywords: [Chicago, candy]
-
-categories: []
-tags: []
-
-map: 
-  coordinates: [41.8781, -87.6298]
-  modern-name: # The name: might be "Constantinople," but it's helpful to have a variable for the current city name ("Istanbul") for searchability
-  display:
-    region: # Useful for grouping by continent or ancient territory (e.g., Mesopotamia, Mediterranean)
-    type: # What is this point? (e.g., battlefield, settlement, monument, trade-route)
-    era: # To help the map show only points relevant to a specific time period (e.g., Bronze Age, Industrial Revolution)
-    marker-color: # You could use hex codes (e.g., #ff5733) to color-code different civilizations
-    zoom-level: # If the specific location is a tiny city, you might want the map to zoom in closer (15) than if it’s a vast empire (4)
-    location-accuracy: # In history, we don't always know exactly where something happened. You could use values like precise, approximate, or legendary
-
-timeline: 
-  sort-year: -1780
-  display:
-    year: "1780 BCE"
-    circa: true # Indicates approximate dates
-
-Footnotes:
-  url: https://wiki.ubc.ca/Course:LIBR548F/2012WT1/Colophon#:~:text=Colophon-,Definition,excommunication%20to%20unauthorized%20copiers.%22%20(
-
+sent-1: > 
+  The book of jack was initially conceived as a ‘Coffee Table’ book.
+sent-2: >
+  It was September 1994 and the Internet was in its infancy. Websites consisted of static HTML tables and numbered less than 10,000 worldwide. Average download speeds with a 56k modem was about 30-35 Kilobits per second. 
+sent-3: >
+  Today, this digital anthology was designed and built using a tech stack unimaginable just a few decades ago.
 ---
 
-## The Digital Craft: Tech Stack & Architecture
-
-*The Book of Jack* is built using a "Static Site" philosophy, prioritizing speed, longevity, and structural transparency. The project represents a synthesis of traditional narrative writing and modern software engineering.
-
-### The Writing Layer
-The narrative was composed and structured in **Scrivener**, utilizing a "Season/Episode" framework to manage the expansive history of the project. This allows for complex story-arc management while maintaining the granular detail required for archaeological accuracy.
-
-### The Logic & Data Layer
-The project’s "brain" is **Jekyll**, a Ruby-based static site generator. 
-* **YAML (Yet Another Markup Language):** Used as the project's DNA to store structured research data, including the Master Evidence Vault and AI Prompt Library.
-* **Liquid:** The templating language that acts as the connective tissue, dynamically retrieving data from YAML files and injecting it into the narrative chapters.
-* **Markdown:** Used for prose to ensure the content remains "future-proof" and decoupled from any specific software.
-
-### The Presentation Layer
-* **Bootstrap 5:** The structural framework used for responsive layout, including the tabbed research centers and collapsible evidence drawers.
-* **HTML5 & CSS3:** Custom-coded to provide a "digital anthology" aesthetic that balances modern legibility with academic tradition.
-
-### Infrastructure & Tooling
-* **GitHub Pages:** Provides secure, version-controlled hosting and automated deployment.
-* **VS Code:** The primary environment for engineering the site's logic and design.
-* **iTerm2:** Used for local development, providing a command-line interface to the Jekyll engine.
 
 
-Markdown (The Ink): It’s the closest thing we have to "plain text," meaning your book will still be readable 50 years from now.
 
-YAML (The Filing Cabinet): It allows you to separate your data (the facts) from your writing. This is why you can update a citation in one file and have it fix itself everywhere on the site.
 
-Liquid (The Librarian): It’s the hardest one to learn because it’s logic-based (if/else, for-loops), but it’s what makes the site "smart."
+### **Detailed Prompt for Tavernier's Miélot Study (c. 1460)**
 
-CSS (The Lighting/Decor): It’s what allowed us to fix that "hover" issue. It controls the mood of the project.
+This prompt creates a photorealistic, cinematic reconstruction of the medieval scriptorium, precisely mapping all specific objects and text from the original illumination (image_6.png) to a complex, three-dimensional environment.
 
-Suggestions for the Colophon
+**Prompt Text:**
 
-Depth: The level of depth provided above is perfect. It’s technical enough for a developer to respect, but clear enough for a layperson to understand that a lot of work went into the "printing" of this digital book.
+A photorealistic, highly detailed cinematic reconstruction of the medieval scribe Jean Miélot in his meticulously recreated study in Bruges, c. 1460, based on image_6.png. The scene is rendered in a monochromatic grisaille-derived palette of sepia, grey-browns, bone whites, and aged vellum textures to maintain the original illumination feel. Miélot, a meticulous portrait in profile, wearing his authentic multi-layered grey robe and hood with a simple cap, is seated on a detailed wooden stool. He is in the identical profile pose, writing intensely in a large vellum manuscript placed on the complex, ornate, multi-part oak and walnut desk. The desk, with its unique triangular pyramid-like front structure holding the main manuscript and scroll with legible script, features intricate gothic carved motifs. Below the writing surface, four precise inkwells are visible on their small side-shelf. The surrounding large wooden shelving unit is packed with hundreds of highly detailed vellum and leather-bound books with metal clasps, arranged precisely as in image_6.png, including the open books propped up and lying on shelves. Specific details, like the open box on the far right top shelf containing the metal instruments and scrolls, are recreated with photorealistic textures. Above the shelving unit, the framed plaque with the verbatim text **'au fil Du roy Dce wps'** is rendered as an aged carved wooden object with legible, old French script. The entire scriptorium environment is rich in wood grain and vellum pores, with cinematic soft, warm side-lighting from a nearby window highlighting dust motes and textures. Ultra-detailed, 8k resolution.
 
-Personal Touch: You might add a sentence about the "Digital Archaeology" of the site itself—mentioning that the code is as much a part of the reconstruction as the images are.
+### The Technology Stack & Architecture
+
+#### The Writing Layer
+* The Book of Jack* is written in [**Scrivener**](https://www.literatureandlatte.com), a comprehensive writing software designed for long-term projects that combines editing, file management, outlining and research tools into one interface.
+
+* Formatting the scrivener text is done with [**Markdown**](https://www.markdownguide.org), a lghtweight, easy-to-read and easy-to-write plain text markup language used to format text for the web.
+
+#### The Framework
+* The Book of Jack is built with [**Jekyll**](https://jekyllrb.com), an open-source static site generator that provides the structure and organization needed to build websites. 
+
+#### The Data & Logic Layer
+* Using [**YAML (Yet Another Markup Language)**](https://yaml.org) for the data layer, keeps structured data such as references, images and navigation separated from the narrative content. 
+
+* The logic for the site comes from [**Liquid**](https://shopify.github.io/liquid/) an open-source, Ruby-based templating language that combines the various sources of content allowing for consistent design across multiple pages.
+
+#### The Presentation Layer
+* [**Bootstrap 5**](https://getbootstrap.com) is an open-source, mobile-first frontend framework for building responsive websites.
+* [**HTML5 & CSS3**](https://www.w3schools.com/htmlcss/default.asp) are the foundational technologies used to build web pages. HTML (HyperText Markup Language) provides the structure and content of a webpage and CSS (Cascading Style Sheets) controls the presentation and visual style of the site.
+
+#### Infrastructure & Tooling
+* [**iTerm2**](https://iterm2.com/index.html) Used for local development, providing a command-line interface to the Jekyll engine.
+* [**GitHub**](github.com) is a web-based platform that provides cloud storage for Git repositories, version control, issue tracking, project management tools, and more.
+* [**VS Code**](https://code.visualstudio.com) is a free, lightweight source code editor, the primary environment for website development.
+* [**GitHub Pages**](*.github.io) Provides secure, version-controlled hosting and automated deployment.

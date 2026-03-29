@@ -1,10 +1,9 @@
 ---
 layout: default
-title: Book of Jack Maps
+title: "Cartography"
 permalink: /map/
 ---
-
-<div id="map" style="height: 80vh; border-radius: 12px;"></div>
+<div id="map" class="my-4" style="height: 80vh; border-radius: 12px;"></div>
 
 <script>
   window.storyLocations = [

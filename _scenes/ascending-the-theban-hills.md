@@ -5,15 +5,11 @@ scene_number: 1
 chapter_number: 1
 part_number: 1
 image: "/assets/images/scenes/leaving-the-nile-valley.png"
-
 ---
-
 
 The transition from the Nile’s floodplains to the high plateau is a sensory threshold, a shift from the damp, organic scent of the lush river valley, to the dry, acrid-metallic dust of the Deshret.
 
 The dawn light catches the Theban Massif at an oblique angle, turning the pale limestone into a searing orange-ochre. Unlike the valley below, where life is thick and noisy, the plateau offers a silence so profound it feels heavy.
-
-{% include image-figure.html id="leaving-the-nile-valley" %}
 
 The scribe Ameny, whose name is the diminutive of Amenemhat, the patron god of Thebes, lives in a mud-brick villa with a central courtyard, provided by the state. He and his family are well-sheltered and well-educated, they are literate and well-fed receiving rations of bread and beer, and portions of meat, figs, and honey.
 
@@ -30,17 +26,3 @@ On this trip, he is travelling with state-funded military protection to ensure t
 Exotic materials from [sub-Saharan Africa via the Kingdom of Kush](https://study.com/academy/lesson/egyptian-trade-in-the-eastern-mediterranean-nile-valley.html) including ivory, ebony and ostrich feathers, high-quality [linen cloth](https://egypttoursgroup.com/ancient-egyptian-economy/) produced in Upper Egyptian workshops were used by the elite bureaucrats and other high-ranking officials, and originating from the Land of Punt, highly prized [myrrh and frankincense](https://www.egypttoursportal.com/en-us/ancient-egyptian-civilization/ancient-egyptian-trade/) were often used by temple priesthoods for daily rituals.
 
 The cargo is significant.
-
-
-
-
-
-
-
-
-
-
-
-
-
-

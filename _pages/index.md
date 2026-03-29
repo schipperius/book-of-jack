@@ -1,7 +1,7 @@
 ---
-layout: page
-title: "The Master Evidence Vault"
-permalink: /research-index/
+layout: default
+title: "Search Index"
+permalink: /search-index/
 ---
 
 {% assign academic_count = site.data.citations | size %}
@@ -9,25 +9,16 @@ permalink: /research-index/
 {% assign visual_count = site.data.images | size %}
 {% assign total_records = academic_count | plus: narrative_count | plus: visual_count %}
 
-<p class="text-muted small mb-4">
-  <i class="bi bi-info-circle"></i> Currently indexing <strong>{{ total_records }}</strong> total records 
-  <span class="mx-2">|</span> 
-  {{ academic_count }} Academic <span class="mx-1">•</span> 
-  {{ narrative_count }} Narrative <span class="mx-1">•</span> 
-  {{ visual_count }} Visual Reconstructions
-</p>
-
-### Project Roadmap
-* **Front Matter**
-    * [Introduction](/intro/)
-    * [Methodology & AI Transparency](/methodology/)
-* **Season 01: The Ascent**
-    {% assign season1 = site.chapters | where: "part_number", 1 | sort: "chapter_number" %}
-    {% for chapter in season1 %}
-    * [Chapter {{ chapter.chapter_number }}: {{ chapter.title }}]({{ chapter.url }})
-    {% endfor %}
-* **Season 02: The Deep Desert**
-    * (In Research Phase)
+<div class="my-4">
+  <h4>Search Index</h4>
+  <p class="text-muted small my-4">
+    <i class="bi bi-info-circle"></i> Currently indexing <strong>{{ total_records }}</strong> total records 
+    <span class="mx-2">|</span> 
+    {{ academic_count }} Academic <span class="mx-1">•</span> 
+    {{ narrative_count }} Narrative <span class="mx-1">•</span> 
+    {{ visual_count }} Visual Reconstructions
+  </p>
+</div>
 
 <div class="container mt-5">
   <p class="lead">A consolidated index of all academic, supplemental, and visual evidence used in this project.</p>

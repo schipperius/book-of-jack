@@ -1,21 +1,10 @@
 ---
 layout: default
 ---
+<article class="scene-container">
+  {% include page-hero.html %}
 
-{% comment %}
-  Page layout - Uses front matter from the current _pages document.
-{% endcomment %}
-
-{% include lead.html
-  image=page.image.path
-  alt=page.image.alt
-  caption=page.image.caption
-  title=page.title
-  description=page.text.description
-  description-two=page.text.description-two
-  description-three=page.text.description-three
-%}
-
-<main class="container my-4 flex-fill">
-  {{ content }}
-</main>
+  <section class="content-body">
+    {{ content }}
+  </section>
+</article>

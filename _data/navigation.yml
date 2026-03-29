@@ -3,10 +3,10 @@ main:
     url: /chapters/
     icon: bi-book
     sublinks:
-      - title: "Season 01: The Ascent"
-        url: /chapters/s01/
-      - title: "Theban Plateau"
-        url: /chapters/the-theban-plateau/
+      - title: 
+        url: 
+      - title: 
+        url: 
   - title: Gallery
     url: /gallery/
     icon: bi-images
@@ -15,14 +15,16 @@ main:
     url: /map/
     icon: bi-map
     sublinks:
-      - title: "Farshût Road"
-        url: /map/farshut-road/
-      - title: "Wadi el-Hôl"
-        url: /map/wadi-el-hol/
+      - title: 
+        url: 
+      - title: 
+        url: 
   - title: Index
-    url: /research-index/
+    url: /search-index/
     icon: bi-bank
-  - title: Method
-    url: /methodology/
-    icon: bi-microscope # Or bi-journal-text
+  - title: Colophon
+    url: /colophon/
+    icon: bi-journal-text
+  
+  
   

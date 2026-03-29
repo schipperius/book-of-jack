@@ -47,32 +47,31 @@ plugins:
 # Collections
 # -----------------------------------------------------------------------------
 collections:
+  pages:
+    output: true
+    permalink: /:name/
   parts:
     output: true
     sort_by: part_number
-    sort_order: ascending
     permalink: /parts/:name/
   chapters:
     output: true
     sort_by: chapter_number
-    sort_order: ascending
     permalink: /chapters/:name/
   scenes:
     output: true
     sort_by: scene_number
-    sort_order: ascending
-    permalink: /:name/
-  stories:
+    permalink: /scenes/:name/
+  plates:
     output: true
-    permalink: /:name/
-
+    permalink: /plates/:name/
 
 # ===============================
 # Includes / Extra Folders
 # ===============================
 # Only needed for folders that are NOT collections
-include:
-  - _pages
+# include:
+#  - _pages
 
 # -----------------------------------------------------------------------------
 # SASS settings

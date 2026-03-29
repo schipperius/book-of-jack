@@ -72,6 +72,12 @@
             <button class="nav-link btn-sm" data-bs-toggle="pill"
               data-bs-target="#visual-{{ include.chapter.chapter_number }}">Visuals</button>
           </li>
+          <li class="nav-item">
+            <button class="nav-link btn-sm" id="pills-method-tab-{{ post.slug }}" data-bs-toggle="pill"
+              data-bs-target="#pills-method-{{ post.slug }}" type="button" role="tab">
+              Visual Reconstruction
+            </button>     
+          </li>
         </ul>
         <div class="tab-content">
           <div class="tab-pane fade show active" id="acad-{{ include.chapter.chapter_number }}">
@@ -82,6 +88,12 @@
           </div>
           <div class="tab-pane fade" id="visual-{{ include.chapter.chapter_number }}">
             {% include image-list.html links=include.chapter.image_refs %}
+          </div>
+          <div class="tab-pane fade" id="pills-method-{{ post.slug }}" role="tabpanel"
+            aria-labelledby="pills-method-tab-{{ post.slug }}">
+            <div class="p-3">
+              {% include methodology.html %}
+            </div>
           </div>
         </div>
       </div>
