@@ -42,6 +42,12 @@ theme: minima
 
 plugins:
   - jekyll-feed
+  - jekyll-scholar
+
+scholar:
+  style: apa # Or your preferred citation style
+  source: _bibliography
+
 
 # -----------------------------------------------------------------------------
 # Collections
@@ -79,7 +85,6 @@ collections:
 
 sass:
   sass_dir: _sass
-  cache_location: ./.sass-cache
 
 # -----------------------------------------------------------------------------
 # Jekyll settings

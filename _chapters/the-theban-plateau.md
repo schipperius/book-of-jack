@@ -1,5 +1,5 @@
 ---
-layout: null
+layout: default
 title: "Trav'lin the Thebes-Farshût Line"
 chapter_number: 1
 part_number: 1

@@ -1,5 +1,5 @@
 ---
-layout: null
+layout: default
 title: "Cross'in the Sinai"
 chapter_number: 2
 part_number: 1
