@@ -37,17 +37,17 @@ author: Mark Schipper
 email: jackstonecreek@gmail.com
 
 # simple_search: http://google.com/search
-
-theme: minima
+# theme: minima
 
 plugins:
   - jekyll-feed
   - jekyll-scholar
 
 scholar:
-  style: apa # Or your preferred citation style
-  source: _bibliography
-
+  style: apa
+  template: bib
+  source: _bibliography  # This tells the plugin WHERE to look
+  bibliography: references.bib # This tells the plugin WHAT file to open
 
 # -----------------------------------------------------------------------------
 # Collections

@@ -13,7 +13,7 @@ gem "jekyll", "~> 4.3"
 group :jekyll_plugins do
   gem "jekyll-scholar"
   gem "jekyll-feed" # Optional: common for blogs
-  gem "webrick", "~> 1.8" # required for some Ruby versions with Jekyll serve
+  gem "webrick" # required for some Ruby versions with Jekyll serve
 end
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.

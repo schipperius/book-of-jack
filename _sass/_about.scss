@@ -20,7 +20,8 @@
   font-weight: 800;
   color: #d4af37;
   background: linear-gradient(to bottom, #f7e08a, #d4af37);
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; /* For Chrome/Safari/Edge */
+    background-clip: text; /* The "Standard" property VS Code wants */
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.5));
 }
