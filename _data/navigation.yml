@@ -2,24 +2,13 @@ main:
   - title: Chapters
     url: /chapters/
     icon: bi-book
-    sublinks:
-      - title: 
-        url: 
-      - title: 
-        url: 
   - title: Gallery
     url: /gallery/
     icon: bi-images
-    # Placeholder for future sublinks
   - title: Map
     url: /map/
     icon: bi-map
-    sublinks:
-      - title: 
-        url: 
-      - title: 
-        url: 
-  - title: Index
+  - title: Library
     url: /search-index/
     icon: bi-bank
   - title: Colophon

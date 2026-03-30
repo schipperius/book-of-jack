@@ -1,10 +1,21 @@
-<header class="navbar container sticky-top bg-body border-bottom px-4 py-3">
+<header class="navbar container sticky-top bg-body border-bottom px-2 py-2">
   <div class="d-flex align-items-center justify-content-between w-100">
 
-    <a class="navbar-brand d-flex align-items-center mb-0" href="{{ '/' | relative_url }}">
-      <span class="fw-normal text-body-secondary">{{ site.sup }} {{ site.title }}</span>
+    {% if page.url == '/' %}
+    {% assign brand_active_class = "btn-secondary" %}
+    {% assign text_class = "text-white" %}
+    {% else %}
+    {% assign brand_active_class = "btn-outline-secondary" %}
+    {% assign text_class = "text-body-secondary" %}
+    {% endif %}
+    
+    <a class="navbar-brand d-flex align-items-center mb-0 btn {{ brand_active_class }} border-0 px-2 py-1"
+      href="{{ '/' | relative_url }}">
+      <span class="fw-normal fs-5 {{ text_class }}">
+        {{ site.sup }} {{ site.title }}
+      </span>
     </a>
-
+  
     <nav class="d-flex align-items-center gap-1 gap-md-2">
       {% for link in site.data.navigation.main %}
     

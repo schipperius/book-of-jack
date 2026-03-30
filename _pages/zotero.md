@@ -1,6 +1,7 @@
 ---
 layout: default
-title: My Bibliography
+title: "Zotero"
+permalink: /zotero/
 ---
 
 # Selected Publications
