@@ -28,7 +28,7 @@ email: jackstonecreek@gmail.com
 plugins:
   - jekyll-scholar
   - jekyll-feed
-  - jekyll-autoprefixer
+  # - jekyll-autoprefixer # Too many build errors, unable to resolve 2026-3-31
   - jekyll-sitemap
   - jekyll-seo-tag
 

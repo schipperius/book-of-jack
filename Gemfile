@@ -6,7 +6,7 @@ gem "jekyll", "~> 4.3"
 group :jekyll_plugins do
   gem "jekyll-scholar"
   gem "jekyll-feed"
-  gem "jekyll-autoprefixer"
+  # gem "jekyll-autoprefixer" # To many build issues 2026-03-31
   gem "jekyll-sitemap", "~> 1.4"
   gem "jekyll-seo-tag", "~> 2.8"
 end
