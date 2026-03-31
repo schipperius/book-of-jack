@@ -14,9 +14,9 @@ end
 # Dependencies & Tools
 gem "webrick"       # Necessary for Ruby 3.0+ 'jekyll serve'
 gem "faraday-retry" # Helper for faraday (often used by scholar)
+gem "execjs"        # JavaScript execution (required by jekyll-autoprefixer)
 
 gem "csv"
 gem "base64"
 gem "bigdecimal"
 gem "mutex_m"
-
