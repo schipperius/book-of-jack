@@ -2,16 +2,17 @@
 layout: top-matter
 title: Colophon
 permalink: /colophon/
-image_id: da-vinci-workshop # The ID from gallery.csv
+image_id: da-vinci-workshop # The ID from b-images.csv
 
 sent-1: > 
-  The book of jack was initially conceived as a ‘Coffee Table’ book.
+  The Book of Jack was initially conceived as a coffee table book.
 sent-2: >
-  It was September 1994 and the Internet was in its infancy. Websites consisted of static HTML tables and numbered less than 10,000 worldwide. Average download speeds with a 56k modem was about 30-35 Kilobits per second. 
+  For context, it was September 1994 and the Internet was in its infancy. Websites consisted of static HTML tables and numbered less than 10,000 worldwide. There were no search engines. Most home computers only had 4 MB of RAM with average download speeds of about 35 Kilobits per second.
 sent-3: >
-  Today, this digital anthology was designed and built using a tech stack unimaginable just a few decades ago.
+  Browsing the web was very very slow and there was sometimes a great deal of anticipation as images filled the screen one line at a time, and hoping your computer wouldn't crash or lose the dial-up connection.
 ---
 
+Today, this digital anthology ...
 
 
 
