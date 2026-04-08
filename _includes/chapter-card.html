@@ -1,7 +1,7 @@
 <!-- Chapter Card -->
 {% assign chapter = include.chapter %}
 
-<article class="card col-lg-8 mx-auto mb-5 shadow-sm border-0 overflow-hidden">
+<article class="card col-lg-12 mx-auto mb-5 shadow-sm border-0 overflow-hidden">
   <div class="card-header bg-transparent border-0 pt-4 px-4">
     <h3 class="text-center mb-0">Chapter {{ chapter.chapter_number }}</h3>
     <h2 class="text-center fw-light mb-3">{{ chapter.title }}</h2>
@@ -14,13 +14,30 @@
 
     {% if chapter.image %}
     <img src="{{ chapter.image | relative_url }}" class="img-fluid rounded mb-4" alt="{{ chapter.title }}">
+    
     <figcaption class="figure-caption">
       Image by {{ page.image.credit }}
       via <a href="{{ page.image.source }}">Source</a>.
       Licensed under {{ page.image.license }}.
-    </figcaption>    
+    </figcaption>  
+    <figcaption class="figure-caption">
+      {% if include.credit %}
+        Photo by {{ include.credit }}
+      {% endif %}
+    
+      {% if include.source %}
+        via <a href="{{ include.source }}">Source</a>
+      {% endif %}
+    
+      {% if include.license %}
+        ({{ include.license }})
+      {% endif %}
+    </figcaption>
+    
     {% endif %}
   </div>
+
+
   <!-- Begin list of scenes -->
   <div class="list-group list-group-flush border-top">
     {% assign scenes = site.b-scenes | where: "chapter_number", chapter.chapter_number | sort: "scene_number" %}

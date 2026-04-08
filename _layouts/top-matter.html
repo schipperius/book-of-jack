@@ -1,32 +1,41 @@
 ---
 layout: default
 ---
-<article class="scene-container">
-  <div class="container col-xxl-8 px-3 py-3">
 
-    <div class="row align-items-center g-4">
-      <div class="col-lg-6">
-        {% assign target_id = page.image_id %}
-        {% if target_id %}
-          {% include image-figure.html id=target_id %}
-        {% endif %}
+{% assign d = site.data.b-images | where: "image_id", page.image_id | first %}
+
+<article class="container my-5">
+  <div class="row g-5">
+
+    <div class="col-lg-12">
+      <div class="plate-frame border-gold p-2 shadow-lg">
+        <img src="{{ d.image_path | relative_url }}" class="img-fluid w-100" alt="{{ d.image_alt }}">
       </div>
-      
-      <div class="col-10 col-sm-8 col-lg-6">
-        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
-          {{ page.title }}
-        </h1>
-        <p class="lead text-body-secondary">
-          {{ page.sent-1 }}
-        </p>
-        <p class="lead text-body-secondary">
-          {{ page.sent-2 }}
-        </p>
-        <p class="lead text-body-secondary">
-          {{ page.sent-3 }}
-        </p>
+      <div class="mt-4 manuscript-text">
+        <h1 class="display-5 archival-font">{{ d.image_title }}</h1>
+        <p class="lead italic text-muted">{{ d.image_caption }}</p>
       </div>
     </div>
+
+  </div>
+</article>
+
+    
+    <div class="col-10 col-sm-8 col-lg-6">
+      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+        {{ page.title }}
+      </h1>
+      <p class="lead text-body-secondary">
+        {{ page.sent-1 }}
+      </p>
+      <p class="lead text-body-secondary">
+        {{ page.sent-2 }}
+      </p>
+      <p class="lead text-body-secondary">
+        {{ page.sent-3 }}
+      </p>
+    </div>
+  </div>
   </div>
   <hr>
 

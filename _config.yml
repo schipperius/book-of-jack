@@ -5,10 +5,6 @@
 
 # -----------------------------------------------------------------------------
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 # -----------------------------------------------------------------------------
 
 github_username: schipperius
@@ -22,7 +18,7 @@ description: >
   A collection of stories about the origin and development of the alphabet, 
   specifically through the lens of the letter J, 
   the name Jack and the phonemic sound shift from /j/ to /dʒ/.
-author: Mark Schipper
+author: Jack D'Vaspe
 email: jackstonecreek@gmail.com
 
 plugins:
@@ -42,6 +38,7 @@ scholar:
 # -----------------------------------------------------------------------------
 # Collections
 # -----------------------------------------------------------------------------
+
 collections:
   top-matter:
     output: true
