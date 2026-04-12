@@ -1,0 +1,111 @@
+/* Apply globally or on inner pages */
+  body.inner-pages {
+    /* Use the dark espresso/brown as the "outer edge" and fade into antique cream */
+    background:
+      /* Subtle background grain (A tile of lightened leather) */
+      url('../assets/img/subtle_leather_texture.png') repeat,
+
+      /* Radial vignette that darkens towards the edges */
+      radial-gradient(circle, #f8f5e1 75%, #2e1a11 100%);
+    /* Antique Cream to Deep Espresso */
+  }
+
+  /* Ensure the main content container feels like a "page" within the "cover" */
+  .main-content-container {
+    background-color: transparent;
+    /* Allows the subtle background to show through */
+    /* OR, use a solid color if you prefer a sharper edge */
+    /* background-color: #f8f5e1; */
+    padding: 2rem;
+    margin-top: 1rem;
+  }
+
+  hr,
+    .section-divider {
+      border: 0;
+      height: 25px;
+      /* Adjust height to fit your scrollwork */
+  
+      /* Path to your clean, transparent PNG/SVG asset of the scroll pattern */
+      background-image: url('../assets/img/gold-scroll-pattern.svg');
+  
+      background-repeat: repeat-x;
+      /* Repeats the motif horizontally */
+      background-position: center;
+      background-size: contain;
+      /* ensures the pattern isn't clipped */
+      opacity: 0.8;
+      /* Subtle transparency makes it feel integrated */
+      margin: 3rem 0;
+      /* Creates space above and below content */ }
+
+  h1.gold-framed {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    /* Space between text and gold */
+  }
+
+  h1.gold-framed::before,
+  h1.gold-framed::after {
+    content: "";
+    display: block;
+    width: 40px;
+    /* Adjust asset width */
+    height: 40px;
+    /* Adjust asset height */
+
+    /* Use the single corner gold motif asset */
+    background-image: url('../assets/img/gold-corner-motif.svg');
+
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  h1.gold-framed::after {
+    transform: scaleX(-1);
+    /* Flips the asset vertically to frame the end */     }
+
+  blockquote.archival {
+    position: relative;
+    background-color: rgba(248, 245, 225, 0.5);
+    /* Semi-transparent cream over vignette */
+
+    /* Apply a gold leaf border style using the pattern */
+    border-left: 5px solid #b59410;
+    /* Aged Brass */
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    border-radius: 4px;
+  }
+
+  /* Optional: Add a subtle corner ornament */
+  blockquote.archival::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 25px;
+    height: 25px;
+    background-image: url('../assets/img/gold-corner-motif.svg');
+    background-size: contain;
+    opacity: 0.3;
+    /* Very subtle fade */   }
+
+    /* A CSS Variable for a "Gold Leaf" effect */
+    :root {
+      --gold-gradient: linear-gradient(45deg,
+          #8b7314 0%,
+          /* Shadow (Aged) */
+          #c5a059 50%,
+          /* Midtone (Hybrid) */
+          #e8d082 100%
+          /* Highlight (Day One) */
+        );
+    }
+
+    .gold-text {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;   }

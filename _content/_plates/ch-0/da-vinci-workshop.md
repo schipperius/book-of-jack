@@ -1,6 +1,6 @@
 ---
 layout: plate
-image_id: "da-vinci-workshop" # <--- The ID links from b-images.csv
+image_id: "da-vinci-workshop" # <--- The ID links from plates.csv
 # Image Metadata has three locations: 
   # _config.yml ---> GLOBAL metadata that applies to ALL images and will NOT change such as attribution_license.
   # _data/b-images.csv ---> UNIQUE metadata that is shorter and may be subject to batch changes.

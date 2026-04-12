@@ -21,7 +21,7 @@
     <h5 class="card-title fw-bold">{{ chapter.title }}</h5>
 
     <p class="card-text ">
-      {{ chapter.content | strip_html | truncatewords: 25 }}
+      {{ chapter.content | strip_html | truncatewords: 2500 }}
     </p>
  
     {% if image_meta %}

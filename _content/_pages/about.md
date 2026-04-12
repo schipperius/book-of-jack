@@ -1,10 +1,30 @@
 ---
-layout: landing
+layout: default
 title: the Book of Jack
 permalink: /
-sent-1: > 
-  A collection of stories about the origin and development of the alphabet, specifically through the lens of the letter J, 
-  the name Jack and the phonemic sound shift from <span class="phonemic">/j/</span> to <span class="phonemic">/dʒ/</span>.
-sent-2: >
-  
 ---
+
+<section class="book-hero py-5 my-5 text-center">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 mx-auto">
+        <h1 class="display-5 fw-light text-body-emphasis mb-4">the Book of Jack</h1>
+        <p class="lead mb-4">
+          A collection of stories about the origin and development of the alphabet, specifically through the lens of the letter J, 
+          the name Jack and the phonemic sound shift from <span class="phonemic">/j/</span> to <span class="phonemic">/dʒ/</span>.        
+        </p>
+        <hr class="my-5">
+        <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+          <a href="{{ '/colophon/' | relative_url }}" class="btn btn-lg px-4"
+            style="background-color: var(--scribe-gold); color: white; border: 1px solid var(--scribe-gold);">
+            What you see here was initially conceived as a coffee table book.
+          </a>
+          <a href="{{ 'chapter.url' | relative_url }}" class="btn btn-lg px-4"
+            style="color: var(--scribe-gold); border: 1px solid var(--scribe-gold); background-color: transparent;">
+            Explore scenes from the first chapter
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
