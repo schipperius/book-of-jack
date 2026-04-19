@@ -59,7 +59,7 @@ image_id: craftsman-workshop # Foreign Key from plates.csv
         {{ page.title }}
       </h1>
       <p class="lead text-body-secondary">The Book of Jack was initially conceived as a coffee table book.</p>
-      <p>This digital anthology retains the original purpose of a curated collection designed for an immersive experience.</p>
+      <p>Hopefully, this digital anthology retains the original intent of a curated collection designed for an immersive experience.</p>
       </div>
       <div class="justify-content-between align-items-center">
         {% comment %} 
@@ -79,7 +79,7 @@ image_id: craftsman-workshop # Foreign Key from plates.csv
 
 
 ### The Technology Stack & Architecture
-* Building data-driven static site architecture has a number of similarities to [*building a house*](https://www.linkedin.com/pulse/building-website-lot-like-house-lori-highby-xnjac) with data management analagous to the [*restaurant dining experience*](https://www.kimballgroup.com/2004/01/data-warehouse-dining-experience/). 
+* Building a website has a number of similarities to [*building a house*](https://www.linkedin.com/pulse/building-website-lot-like-house-lori-highby-xnjac) with the data resembling [*the kitchen and dining room*](https://www.kimballgroup.com/2004/01/data-warehouse-dining-experience/) experience. 
 
 #### The Framework
 * [*Jekyll*](https://jekyllrb.com) provides a structured framework to build, manage and deploy the Book of Jack. 
@@ -88,32 +88,16 @@ image_id: craftsman-workshop # Foreign Key from plates.csv
 * [*Markdown*](https://www.markdownguide.org), [*HTML5 & CSS3*](https://www.w3schools.com/htmlcss/default.asp) and [*Bootstrap 5*](https://getbootstrap.com) are used to format text, build the static pages, control the presentation and visual style, and provide mobile first responsiveness.  
 
 #### The Data Layer
-* [*Zotero*](https://www.zotero.org) is used to collect, organize, annotate and cite research. The [*Better BibTeX*](https://retorque.re/zotero-better-bibtex/) extension is used to manage, customize and prepare the bibliographic data for export. And [*YAML*](https://yaml.org) keeps the structured data such as references, images and navigation separate from the presentation layer. 
+* [*Zotero*](https://www.zotero.org) is used to collect, organize, annotate and cite research. The [*Better BibTeX*](https://retorque.re/zotero-better-bibtex/) extension is used to manage, customize and prepare the bibliographic data for export. [*YAML*](https://yaml.org) keeps the structured data such as references, images and navigation separate from the presentation layer. 
 
 #### The Logic Layer
-* [*Liquid*](https://shopify.github.io/liquid/) acts as the 'glue' that connects the presentation and data layers creating a seemless design across multiple pages.
+* [*Liquid*](https://shopify.github.io/liquid/) acts as the 'glue' that connects the presentation and data layers creating the seemless design patterns across multiple pages and entire websites.
 
 #### Infrastructure & Tooling
 * For local development, [*iTerm2*](https://iterm2.com/index.html) provides a command-line interface to the Jekyll engine and [*VS Code*](https://code.visualstudio.com) is the primary development editor. 
 
-* A web-based platform, [*GitHub*](github.com) provides cloud storage for Git repositories, version control, issue tracking, project management tools, and more. [*GitHub Pages*](*.github.io) provides secure, version-controlled hosting and automated deployment and [*GitHub Actions*](https://github.com/features/actions) is used to automate web development workflows thorugh cccontinuous integration and delivery.
+* [*GitHub*](github.com) provides cloud storage for Git repositories, version control, issue tracking and project management tools. [*GitHub Pages*](*.github.io) provides secure hosting and automated deployment and [*GitHub Actions*](https://github.com/features/actions) is used to automate development workflows thorugh continuous integration and delivery.
 
 #### Writing & Editing
-* [*Scrivener*](https://www.literatureandlatte.com) combines editing, file management, outlining and research tools into one interface.
-
-<br>
-<!-- Paginaton-->
-<div class="row mt-2 pt-3" style="border-color: var(--scribe-gold) !important;">
-  <div class="col-12 d-flex align-items-center gap-1 gap-md-3">
-    {% if page.previous %}
-    <a href="{{ page.previous.url | relative_url }}" class="btn btn-outline-dark fw-light">&larr; Previous Page</a>
-    {% else %}
-    <span></span>
-    {% endif %}
-    {% if page.next %}
-    <a href="{{ page.next.url | relative_url }}" class="btn btn-outline-dark fw-light">Next Page &rarr;</a>
-    {% endif %}
-  </div>
-</div>
-<br>
+* [*Scrivener*](https://www.literatureandlatte.com) is widely regarded as one of the best word-processing software programs designed specifically for writers, combining editing, file management, outlining and research tools into one user-friendly interface.
 

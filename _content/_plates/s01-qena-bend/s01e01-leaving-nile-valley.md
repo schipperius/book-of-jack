@@ -1,6 +1,9 @@
 ---
 layout: plate
-image_id: leaving-nile-valley
+image_id: s01e01-leaving-nile-valley
+
+plate_number: 1
+
 # Image Metadata has three locations: 
   # _config.yml ---> GLOBAL metadata that applies to ALL images and will NOT change such as attribution_license.
   # _data/plates.csv ---> UNIQUE metadata that is shorter and may be subject to batch changes.
@@ -31,4 +34,3 @@ informed_url: https://isac.uchicago.edu/research/publications/oip/theban-desert-
 
 ---
 
-* The caravan 

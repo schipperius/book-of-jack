@@ -1,10 +1,11 @@
 ---
 layout: scene
 title: "Crossing the Sinai Peninsula"
+
 scene_number: 1
 chapter_number: 2
 part_number: 1
-image: "/assets/images/ch-2/crossing-the-sinai-peninsula.png"
+image: "/assets/images/ch-2/crossing-the-land-fayrous.png"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 

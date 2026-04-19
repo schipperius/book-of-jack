@@ -1,10 +1,12 @@
 ---
 layout: scene
+image_id: s01e01-ascending-theban-hills
 title: "Ascending the Theban Hills"
+
 scene_number: 2
 chapter_number: 1
 part_number: 1
-image: "/assets/images/theban-plateau/leaving-nile-valley.png"
+
 ---
 
 The transition from the Nile’s floodplains to the high plateau is a sensory threshold, a shift from the damp, organic scent of the lush river valley, to the dry, acrid-metallic dust of the Deshret.

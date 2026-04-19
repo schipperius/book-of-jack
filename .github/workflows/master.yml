@@ -1,0 +1,57 @@
+name: 🚀 Anthology Master Workflow
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. Checkout Code
+        uses: actions/checkout@v4
+
+      - name: 2. Set up Python & Sync Data
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - run: |
+          pip install pandas
+          python scripts/sync_data.py
+
+      - name: 3. Set up Ruby & Build Site 
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4'
+          bundler-cache: true
+      - run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+      - name: 4. Run Link Checker
+        uses: lycheeverse/lychee-action@v1.8.0
+        with:
+          args: --verbose --no-progress "./_site/**/*.html"
+          fail: true # This stops the deploy if broken links are found!
+
+      - name: 5. Upload & Deploy
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Final Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,4 +1,4 @@
 ---
 layout: plate
-image_id: map-sinai-peninsula
+image_id: map-land-fayrous
 ---

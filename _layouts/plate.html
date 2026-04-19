@@ -252,6 +252,7 @@ layout: default
             Chapter {{ d.chapter_number }}
           </a>
           <span class="mx-2">|</span>
+          <!-- this link does not go to the scene -->
           <a href="{{ '/chapters/' | relative_url }}" class="text-decoration-none border-bottom"
             style="color: var(--scribe-gold); border-color: var(--scribe-gold) !important;">
             Scene {{ d.scene_number }}
@@ -289,7 +290,7 @@ layout: default
                 style="color: var(--scribe-gold); border-color: var(--scribe-gold) !important;">
                 {{ d.attr_image_credit }}
               </a> 
-              for the {{ d.attr_image_source }} ({{ d.image_date }}).
+              for the {{ d.attr_image_source }} ({{ d.image_date_year }}).
             </p>
             <p class="">This visual reconstruction is primarily informed {{ page.image_info }} <em>{{ page.image_informed }}</em> 
               <a href="{{ page.informed_url }}" class="text-decoration-none"
@@ -385,23 +386,8 @@ layout: default
         </div>
       </div>
     </div>
-  </div>
-  
-  <!-- Paginaton-->
-  <div class="row mt-2 pt-3" style="border-color: var(--scribe-gold) !important;">
-    <div class="col-12 d-flex justify-content-between align-items-center">
-      {% if page.previous %}
-      <a href="{{ page.previous.url | relative_url }}" class="btn btn-outline-dark fw-bold">&larr; Previous Plate</a>
-      {% else %}
-      <span></span>
-      {% endif %}
+    {% include pagination.html collection="plates" sort_key="plate_number"%}
 
-      <a href="{{ '/gallery/' | relative_url }}" class="btn btn-dark px-5">the Gallery</a>
-
-      {% if page.next %}
-      <a href="{{ page.next.url | relative_url }}" class="btn btn-outline-dark fw-bold">Next Plate &rarr;</a>
-      {% endif %}
-    </div>
   </div>
 </article>
 

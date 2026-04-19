@@ -1,10 +1,10 @@
 ---
 layout: scene
-title: "Climbing the Limestone Cliffs"
-scene_number: 3
+title: "Giving Thanks"
+scene_number: 4
 chapter_number: 1
 part_number: 1
-image: "/assets/images/ch-1/crossing-the-theban-plateau.png"
+image: "/assets/images/ch-1/crossing-the-qena-bend.png"
 ---
 
 It was hot, arid with a metallic taste in the air. 

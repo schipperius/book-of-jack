@@ -1,10 +1,10 @@
 ---
 layout: scene
-title: "Crossing the Theban Plateau"
-scene_number: 5
+title: "Arriving at Gebel Roma"
+scene_number: 6
 chapter_number: 1
 part_number: 1
-image: "/assets/images/ch-1/crossing-the-theban-plateau.png"
+image: "/assets/images/ch-1/crossing-the-qena-bend.png"
 ---
 
 It was hot, arid with a metallic taste in the air. 

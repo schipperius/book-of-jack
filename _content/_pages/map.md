@@ -3,6 +3,7 @@ layout: default
 title: Map
 permalink: /map/
 ---
+
 <section id="map" class="my-4" style="height: 80vh; border-radius: 12px;">
 </section>
 

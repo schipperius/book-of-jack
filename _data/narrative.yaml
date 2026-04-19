@@ -72,31 +72,20 @@ references:
   type: webpage
   URL: https://www.kimballgroup.com/2004/01/data-warehouse-dining-experience/
 
-- id: ThothHill2025
+- id: SmarthistoryArtHistory
   abstract: >-
-    Thoth Hill is an archaeological site first dated to predynastic period
-    located on the West Bank of Thebes approximately 3 kilometers north of the
-    Valley of the Kings. A predynastic temple was built over by a mud-brick
-    temple from the 11th Dynasty that is still visible today. The temple was
-    dedicated to the god Horus. The site is the oldest known temple in Thebes.
+    World-class resources on art and cultural objects for learners from around
+    the globe
   accessed:
     - year: 2026
       month: 4
-      day: 4
-  chapters: Chapter 01
-  citation-key: ThothHill2025
-  container-title: Wikipedia
-  date: '2025-05-08T00:44:57Z'
-  issued:
-    - year: 2025
-      month: 5
-      day: 8
+      day: 17
+  citation-key: SmarthistoryArtHistory
+  container-title: Smarthistory
   language: en
-  license: Creative Commons Attribution-ShareAlike License
-  note: 'chapters: Chapter 01'
-  publication: Wikipedia
-  tags: narrative, chapter-01
-  title: Thoth Hill
+  publication: Smarthistory
+  tags: narrative
+  title: Smarthistory – art history
   type: webpage
-  URL: https://en.wikipedia.org/w/index.php?title=Thoth_Hill&oldid=1289342176
+  URL: https://smarthistory.org/
 ...

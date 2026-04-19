@@ -1,7 +1,6 @@
 ---
 layout: plate
-image_id: map-qena-bend
-
+image_id: s01-map-qena-bend
 
 model: "Gemini 3 Flash"
 date_generated: 2026-03-20

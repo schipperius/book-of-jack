@@ -2,6 +2,7 @@
 layout: default
 ---
 
+
 <style>
   /* --- LAYOUT FOUNDATION --- */
   .chapter-wrapper {
@@ -105,46 +106,64 @@ layout: default
   }
 </style>
 
-{% comment %}
-TRIAD ARCHITECTURE LOGIC:
-1. We look into the 'plates' collection (site.plates) to find the Markdown file
-that matches our scene's image_id. This gives us 'plate_doc' (The Label).
-2. We look into 'site.data.plates' (your CSV) to get 'd' (The Technical Ledger).
-{% endcomment %}
+<div class="chapter-wrapper">
 
-{% assign plate_doc = site.plates | where: "image_id", page.image_id | first %}
-{% assign d = site.data.plates | where: "image_id", page.image_id | first %}
+  <section class="chapter-intro-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h4 class="text-uppercase small fw-light text-muted mb-2" style="letter-spacing: 2px;">
+            Chapter {{ page.chapter_number }} — Part {{ page.part_number }}
+          </h4>
+          <h1 class="display-4 serif-font mb-4">{{ page.title }}</h1>
+          <div class="lead serif-font" style="font-size: 1.25rem; color: #4a4a4a;">
+            {{ content }} </div>
+        </div>
 
-{% comment %}
-Logic Check: We pull the full data object 'd' from our CSV/Data file.
-The error usually occurs here: the <img> tag was looking for 'page.image_path',
-but the actual path is likely stored inside the 'd' object (e.g., d.image_path).
-{% endcomment %}
-
-<section class="chapter-intro-section">
-  <div class="container">
-    <div class="row align-items-center">
-
-      <div class="col-lg-6">
-        <h4 class="text-uppercase small fw-light text-muted mb-2" style="letter-spacing: 2px;">
-          Chapter {{ page.chapter_number }} — Part {{ page.part_number }}
-        </h4>
-        <h1 class="display-4 serif-font mb-4">{{ page.title }}</h1>
-        <div class="lead serif-font" style="font-size: 1.25rem; color: #4a4a4a;">
-          {{ content }} </div>
-      </div>
-
-      <div class="col-lg-6 mt-4 mt-lg-0">
-        <div class="map-box rounded">
-          <img src="{{ page.image | relative_url }}" class="img-fluid w-100" alt="Map of {{ page.title }}">
-          <p class="small text-muted mt-2 mb-0 text-center italic-serif">
-            Figure {{ page.chapter_number }}.A: Geographical context of the Farshût Desert Road.
-          </p>
-          <p>{{ page.prompt }}</p>
+        <div class="col-lg-6 mt-4 mt-lg-0">
+          <div class="map-box rounded">
+            <img src="{{ page.image | relative_url }}" class="img-fluid w-100" alt="Map of {{ page.title }}">
+            <p class="small text-muted mt-2 mb-0 text-center italic-serif">
+              Figure {{ page.chapter_number }}.A: Geographical context of the Farshût Desert Road.
+            </p>
+          </div>
         </div>
       </div>
-      {% include pagination.html collection="chapters" sort_key="chapter_number"%}
-
     </div>
+  </section>
+
+  <div class="filmstrip-container">
+
+    {% assign scenes = site.scenes | where: "chapter_number", page.chapter_number | sort: "scene_number" %}
+
+    {% for scene in scenes %}
+    <section class="scene-frame">
+      <div class="card border-0 shadow-sm overflow-hidden h-100 bg-transparent">
+
+        <div class="scene-image-wrap position-relative">
+          <img src="{{ scene.image | relative_url }}" class="img-fluid rounded shadow"
+            style="width: 100%; height: 400px; object-fit: cover;" alt="{{ scene.title }}">
+          <span class="badge bg-dark position-absolute top-0 end-0 m-3 opacity-75 fw-normal">
+            Scene {{ scene.scene_number }}
+          </span>
+        </div>
+
+        <div class="card-body px-0 pt-4">
+          <h3 class="serif-font h2 mb-3">{{ scene.title }}</h3>
+
+          <div class="scene-narrative mb-4 small-serif" style="font-size: 1.1rem; line-height: 1.6;">
+            {{ scene.content | strip_html | truncatewords: 40 }}
+          </div>
+
+          <a href="{{ scene.url | relative_url }}" class="btn btn-outline-dark px-4 py-2">
+            Examine Evidence <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    {% endfor %}
+
+    <div style="flex: 0 0 100px;" class="d-none d-lg-block"></div>
   </div>
-</section>
+
+</div>

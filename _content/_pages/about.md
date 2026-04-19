@@ -19,7 +19,7 @@ permalink: /
             style="background-color: var(--scribe-gold); color: white; border: 1px solid var(--scribe-gold);">
             What you see here was initially conceived as a coffee table book.
           </a>
-          <a href="{{ 'chapter.url' | relative_url }}" class="btn btn-lg px-4"
+          <a href="{{ '/chapters/' | relative_url }}" class="btn btn-lg px-4"
             style="color: var(--scribe-gold); border: 1px solid var(--scribe-gold); background-color: transparent;">
             Explore scenes from the first chapter
           </a>
