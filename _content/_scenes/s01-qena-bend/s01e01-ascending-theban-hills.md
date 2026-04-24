@@ -1,7 +1,6 @@
 ---
 layout: scene
 image_id: s01e01-ascending-theban-hills
-title: "Ascending the Theban Hills"
 
 scene_number: 2
 chapter_number: 1

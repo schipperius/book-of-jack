@@ -2,9 +2,6 @@
 layout: scene
 image_id: s01e01-giving-thanks-offerings
 
-title: "Giving Thanks and Offerings"
-
-
 scene_number: 4
 chapter_number: 1
 part_number: 1
