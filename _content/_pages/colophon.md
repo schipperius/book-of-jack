@@ -7,31 +7,33 @@ image_id: col-da-vinci-bottega
 ---
 
 {% comment %} 
-  1. Index everything using the new naming convention
+  1. Index everything
 {% endcomment %}
-{% assign manifest_map = site.data.manifest    | group_by: "image_id" %}
-{% assign loc_map      = site.data.location    | group_by: "image_id" %}
-{% assign attr_map     = site.data.attribution | group_by: "image_id" %}
-{% assign plate_map    = site.plates           | group_by: "image_id" %}
+
+{% assign man_map = site.data.manifest | group_by: "image_id" %}
+{% assign loc_map = site.data.location | group_by: "image_id" %}
+{% assign attr_map = site.data.attribution | group_by: "image_id" %}
+{% assign plate_map = site.plates | group_by: "image_id" %}
 
 {% comment %} 
   2. Perform lookups for the specific image_id defined in front matter
 {% endcomment %}
+
 {% assign target_id = page.image_id | append: "" | strip %}
 
-{% assign manifest = manifest_map | where: "name", target_id | map: "items" | first | first %}
-{% assign loc      = loc_map      | where: "name", target_id | map: "items" | first | first %}
-{% assign attr     = attr_map     | where: "name", target_id | map: "items" | first | first %}
-{% assign plate    = plate_map    | where: "name", target_id | map: "items" | first | first %}
+{% assign man = man_map | where: "name", target_id | map: "items" | first | first %}
+{% assign loc = loc_map | where: "name", target_id | map: "items" | first | first %}
+{% assign attr = attr_map | where: "name", target_id | map: "items" | first | first %}
+{% assign plate = plate_map | where: "name", target_id | map: "items" | first | first %}
 
 <article class="container-fluid px-lg-0 my-5">
   <div class="row g-5">
     <div class="col-lg-8">
 
-      {% if manifest %}
+      {% if man %}
         <div class="hero-plate-frame p-2 shadow-lg mb-2">
-          <a href="{{ manifest.image_path | relative_url }}" class="lightbox-trigger">
-            <img src="{{ manifest.image_path | relative_url }}" class="img-fluid w-100" alt="{{ manifest.image_title }}">
+          <a href="{{ man.image_path | relative_url }}" class="lightbox-trigger">
+            <img src="{{ man.image_path | relative_url }}" class="img-fluid w-100" alt="{{ man.image_title }}">
           </a>
         </div>
 
@@ -45,11 +47,11 @@ image_id: col-da-vinci-bottega
         </div>
 
         <div class="px-2 mt-4">
-          <h3 class="display-6">{{ manifest.image_title }}</h3>
+          <h3 class="display-6">{{ man.image_title }}</h3>
           
-          {% comment %} Fallback: Plate caption > Manifest caption > Manifest Title {% endcomment %}
+          {% comment %} Fallback: Plate caption > man caption > man Title {% endcomment %}
           <p class="lead">
-            {{ plate.image_caption | default: manifest.image_caption | default: manifest.image_title }}
+            {{ plate.image_caption | default: man.image_caption | default: man.image_title }}
           </p>
           
           {% comment %} This displays Markdown text from your _plates/ file {% endcomment %}
@@ -60,20 +62,20 @@ image_id: col-da-vinci-bottega
 
       {% else %}
         <div class="alert alert-warning">
-          Data for ID <strong>{{ target_id }}</strong> not found in master manifest.
+          Data for ID <strong>{{ target_id }}</strong> not found in master man.
         </div>
       {% endif %}
     </div>
 
     <div class="col-lg-4">
       <div class="mb-4">
-        <p class="lead text-body-secondary">The Book of Jack was initially conceived as a coffee table book. Today, it's a digital anthology.</p>
+        <p class="lead text-body-secondary">The Book of Jack was initially conceived as a coffee table book.</p>
         <p>The history of writing and publishing is marked by diverse spaces, from sacred "Houses of Life" to industrial print shops, each reflecting the technology and culture of its era...</p>
       </div>
 
       <div class="mt-4">
-        {% comment %} Using status from the attribution or manifest file {% endcomment %}
-        {% if attr.status == "verified" or manifest.status == "verified" %}
+        {% comment %} Using status from the attribution or man file {% endcomment %}
+        {% if attr.status == "verified" or man.status == "verified" %}
           <span class="badge bg-success">Museum Verified</span>
         {% else %}
           <span class="badge border text-secondary">Research in Progress</span>
@@ -81,10 +83,8 @@ image_id: col-da-vinci-bottega
       </div>
     </div>
   </div>
-  <hr class="border-bottom my-2">
+  <hr class="my-2 gold-rule border-bottom">
 </article>
-
-Darnell, J. C., & Darnell, D. (1993). The Luxor-Farshût desert road survey. *The Oriental Institute 1992-1993 Annual Report*, 48–55. [https://oi.uchicago.edu](https://isac.uchicago.edu/sites/default/files/uploads/shared/docs/ar/91-00/92-93/92-93_Desert_Road.pdf)
 
 ### The Technology Stack & Architecture for the Book of Jack Project
 

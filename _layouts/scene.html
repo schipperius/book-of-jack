@@ -2,10 +2,22 @@
 layout: default
 ---
 
+<style>
+  /* <hr class="gold-rule"> horizontal rule*/
+  .gold-rule {
+    border: 0;
+    height: 3px;
+    background-image: linear-gradient(to right, transparent, #d4af37, transparent);
+    opacity: 0.8;
+    margin: 1rem auto;
+    width: 100%;
+  }
+</style>
+
 {% comment %}
-1. INDEX EVERYTHING BY IMAGE_ID
-We index all satellite files so we can pull any piece of data needed.
+1. INDEX EVERYTHING BY IMAGE_ID: All satellite files.
 {% endcomment %}
+
 {% assign man_map = site.data.manifest | group_by: "image_id" %}
 {% assign loc_map = site.data.location | group_by: "image_id" %}
 {% assign attr_map = site.data.attribution | group_by: "image_id" %}
@@ -15,6 +27,7 @@ We index all satellite files so we can pull any piece of data needed.
 {% comment %}
 2. LOOKUP DATA FOR THIS SPECIFIC SCENE
 {% endcomment %}
+
 {% assign target_id = page.image_id | append: "" | strip %}
 
 {% assign man = man_map | where: "name", target_id | map: "items" | first | first %}
@@ -27,9 +40,9 @@ We index all satellite files so we can pull any piece of data needed.
     <h6 class="text-uppercase tracking-widest text-muted mb-4">
       <!-- Add link from chapter to the chapter.number image of the chapters page -->
       {% if page.chapter_number %}Chapter {{ page.chapter_number }}{% endif %}
-      {% if page.scene_number %}| Scene {{ page.scene_number }}{% endif %}
+      {% if page.scenes %}| Scenes {{ page.scenes }}{% endif %}
     </h6>
-    <h1 class="display-5 fw-bold serif-heading">{{ man.image_title | default: man.image_title }}</h1>
+    <h1 class="gold-text display-5 fw-light serif-heading">{{ man.image_title | default: man.image_title }}</h1>
 
     {% comment %}
     CURATOR'S DRAWER TRIGGER:
@@ -47,13 +60,19 @@ We index all satellite files so we can pull any piece of data needed.
 
   {% if man.image_path %}
   <div class="scene-hero-container">
-    <!-- Add <a></a> to image and link to corresponding plate. -->
-    <img src="{{ man.image_path | relative_url }}" class="img-fluid w-100"
-      style="max-height: 450px; object-fit: cover;" alt="{{ man.image_title }}">
+    {% if plate.url %}
+    <a href="{{ plate.url | relative_url }}" class="d-block">
+      {% endif %}
+      <img src="{{ man.image_path | relative_url }}" class="img-fluid w-100"
+        style="max-height: 450px; object-fit: cover;" alt="{{ man.image_title }}">
+      {% if plate.url %}
+    </a>
+      {% endif %}
 
     {% comment %}
     Caption logic: Check the Long-form Plate first, then fallback to Master Manifest.
     {% endcomment %}
+
     {% assign display_caption = plate.image_caption | default: man.image_caption %}
     {% if display_caption %}
     <div class="p-3 text-center border-bottom">
@@ -66,6 +85,7 @@ We index all satellite files so we can pull any piece of data needed.
     {% endif %}
   </div>
   {% endif %}
+  <hr class="my-5 gold-rule border-bottom">
 
   <div class="card-body p-4 p-md-5 drop-cap">
     {{ content }}

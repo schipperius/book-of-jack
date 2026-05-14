@@ -14,12 +14,10 @@ permalink: /library/
   /* 1. Header & Search Styling */
   .fw-light {
     font-family: serif;
-    /* color: var(--scribe-text); */
   }
 
   #vaultSearch {
     border: 1px solid var(--scribe-gold) !important;
-    /* background-color: var(--scribe-bg); */
     font-family: serif;
     font-style: italic;
     border-radius: 0;
@@ -53,7 +51,6 @@ permalink: /library/
   }
 
   .evidence-row .list-group-item:hover {
-    background-color: var(--scribe-bg);
     border-left: 3px solid var(--scribe-gold);
     padding-left: 1.5rem;
     /* Subtle "nudge" effect */
@@ -106,15 +103,15 @@ permalink: /library/
 </style>
 
 {% comment %}
-1. INDEX DATA
-We use manifest_map for the visual tab to match your new master CSV name.
+  1. INDEX DATA
 {% endcomment %}
-{% assign manifest_map = site.data.manifest | group_by: "image_id" %}
+
+{% assign man_map = site.data.manifest | group_by: "image_id" %}
 {% assign visual_count = site.plates | size %}
 {% assign academic_count = site.data.academic.references | size | default: 0 %}
 {% assign narrative_count = site.data.narrative.references | size | default: 0 %}
 
-<section class="container mt-5">
+<section class="container inner-pages mt-5">
   <div class="my-3">
     <h1 class="fw-light border-bottom pb-2" style="border-color: var(--scribe-gold) !important;">Library Index</h1>
     <p class="text-secondary my-4">
@@ -125,10 +122,6 @@ We use manifest_map for the visual tab to match your new master CSV name.
       {{ visual_count }} Visual
     </p>
   </div>
-
-<p>Darnell, J. C., & Darnell, D. (1993). The Luxor-Farshût desert road survey. *The Oriental Institute 1992-1993 Annual
-Report*, 48–55.
-[https://oi.uchicago.edu](https://isac.uchicago.edu/sites/default/files/uploads/shared/docs/ar/91-00/92-93/92-93_Desert_Road.pdf)</p>
 
   <p class="lead text-body">A consolidated index of all primary, supplemental, and visual evidence.</p>
 
@@ -141,7 +134,7 @@ Report*, 48–55.
     <li class="nav-item">
       <button class="nav-link active fw-light" id="academic-tab" data-bs-toggle="tab" data-bs-target="#academic-pane"
         type="button" role="tab">
-        Academic <span id="count-academic" class="badge rounded-pill bg-secondary ms-1 small">{{ academic_count
+        Scholarly <span id="count-academic" class="badge rounded-pill bg-secondary ms-1 small">{{ academic_count
           }}</span>
       </button>
     </li>
@@ -202,10 +195,28 @@ Report*, 48–55.
         {% for entry in site.data.narrative.references %}
         <div class="evidence-row">
           <div class="list-group-item list-group-item-action py-3 position-relative">
-            <h6 class="mb-1 text-body fw-normal">{{ entry.title | default: "Untitled Work" }}</h6>
-            <p class="mb-2 text-secondary small">{{ entry.author_list }} ({{ entry.issued.year | default: "n.d." }}).
-            </p>
-            {% if entry.URL %}<a href="{{ entry.URL }}" target="_blank" class="stretched-link"></a>{% endif %}
+            <div class="apa-reference text-body fw-normal">
+              {% comment %} Author Loop {% endcomment %}
+              {% assign author_count = entry.author | size %}
+              {% for person in entry.author %}
+              {{ person.family }},
+              {% assign initials = person.given | split: " " %}
+              {% for initial in initials %}{{ initial | slice: 0 }}. {% endfor %}
+              {% if forloop.index < author_count %} {% assign next_to_last=author_count | minus: 1 %} {% if
+                forloop.index==next_to_last %}&amp; {% else %}, {% endif %} {% endif %} {% endfor %} {% comment %} Year and
+                Title {% endcomment %} ({{ entry.issued.[0]year | default: "n.d." }}). {{ entry.title |
+                default: "Untitled Work" }}. {% comment %} Journal/Publication Details {% endcomment %} {% if
+                entry["container-title"] %} <em>{{ entry["container-title"] }}</em>{% if entry.volume %}, <em>{{
+                  entry.volume }}</em>{% endif %}{% if entry.issue %}({{ entry.issue }}){% endif %}{% if entry.page %}, {{
+                entry.page }}{% endif %}.
+                {% endif %}
+                {% comment %} URL appended immediately after {% endcomment %}
+                {% if entry.URL %}
+                <a href="{{ entry.URL }}" target="_blank" class="stretched-link text-primary text-decoration-none text-body">
+                  {{ entry.URL }}
+                </a>
+                {% endif %}
+            </div>
           </div>
         </div>
         {% endfor %}
@@ -213,24 +224,24 @@ Report*, 48–55.
     </div>
 
     {% comment %} VISUAL PANE {% endcomment %}
-    <div class="tab-pane fade" id="visual-pane" role="tabpanel">
+      <div class="tab-pane fade" id="visual-pane" role="tabpanel">
       <div class="row row-cols-1 row-cols-md-2 g-4 mt-1">
         {% for plate_file in site.plates %}
         {% assign current_id = plate_file.image_id | append: "" | strip %}
-        {% assign metadata = manifest_map | where: "name", current_id | map: "items" | first | first %}
+        {% assign man = man_map | where: "name", current_id | map: "items" | first | first %}
 
         <div class="col evidence-row">
           <div class="card h-100 border-0 bg-body-tertiary shadow-sm position-relative visual-card-custom">
             <div class="row g-0 h-100">
               <div class="col-4">
-                <img src="{{ metadata.image_path | relative_url }}"
+                <img src="{{ man.image_path | relative_url }}"
                   class="img-fluid rounded-start h-100 object-fit-cover" style="min-height: 100px;">
               </div>
               <div class="col-8">
                 <div class="card-body p-3">
                   <h6 class="card-title mb-1 fw-light">{{ plate_file.title }}</h6>
                   <p class="card-text small text-secondary">
-                    {{ metadata.image_title }} {% if metadata.display_year %}({{ metadata.display_year }}){% endif %}
+                    {{ man.image_title }} {% if man.display_year %}({{ man.display_year }}){% endif %}
                   </p>
                   <a href="{{ plate_file.url | relative_url }}" class="stretched-link"></a>
                 </div>

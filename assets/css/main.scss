@@ -1,6 +1,5 @@
 --- 
+# Two lines of triple dashes tell Jekyll to process this SCSS file 
+---
+@import "typography";
 
---- 
-@use 'global';
-@use 'about';
-@use 'custom';

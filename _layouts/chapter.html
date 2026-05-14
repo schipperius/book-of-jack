@@ -4,133 +4,68 @@ layout: default
 
 <style>
   /* --- LAYOUT FOUNDATION --- */
-  .chapter-wrapper {
-    background-color: #fdfaf0;
-    /* Antique paper tone */
+  .wrapper {
+    background-color: #f7f2e6; /* Aged Parchment */
     min-height: 100vh;
     overflow-x: hidden;
-  }
-
-  /* --- CHAPTER INTRO (VERTICAL SECTION) --- */
-  .chapter-intro-section {
-    padding: 4rem 0;
-    border-bottom: 2px solid #e2d9c2;
-    background: #fff;
-    /* Slight contrast from the scroll area */
-  }
-
-  .map-box {
-    border: 1px solid #d1c7ac;
-    padding: 10px;
-    background: #fff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  }
-
-  /* --- SCENE FILMSTRIP (HORIZONTAL SECTION) --- */
-  @media (min-width: 992px) {
-    .filmstrip-container {
-      display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      /* Enables horizontal scroll */
-      overflow-y: hidden;
-      padding: 3rem 0;
-      scroll-snap-type: x mandatory;
-      /* Snaps to each scene card */
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .scene-frame {
-      flex: 0 0 650px;
-      /* Width of each scene on desktop */
-      margin-left: 3rem;
-      scroll-snap-align: center;
-    }
-  }
-
-  /* --- MOBILE STACKING --- */
-  @media (max-width: 991px) {
-    .filmstrip-container {
-      display: block;
-      /* Stacks vertically on mobile */
-      padding: 2rem;
-    }
-
-    .scene-frame {
-      margin-bottom: 4rem;
-      width: 100%;
-    }
   }
 
   /* --- TYPOGRAPHY & AESTHETIC --- */
   .serif-font {
     font-family: 'EB Garamond', serif;
+    font-size: 1.25em;
+    line-height: 1.6em;
+  }
+
+  .sans-serif-font {
+    font-family:'Montserrat', sans-serif;
+    color: #ab7f3d
+  }
+
+  .sans-serif-font {
+    font-family:'Montserrat', sans-serif;
+    color: #6a3e2a
+  }
+
+  .map-box {
+    border: 1px solid #ab7f3d;
+    padding: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   }
 
   .antique-hover:hover {
-    transform: translateY(-5px);
+    transform: translate(-5px);
     transition: transform 0.3s ease;
   }
 
-  /* --- THE FILMSTRIP CORE --- */
-  @media (min-width: 992px) {
-    .filmstrip-container {
-      display: flex;         /* Changes from block to a horizontal row */
-      flex-wrap: nowrap;     /* PREVENTS the two-row behavior you are seeing */
-      overflow-x: auto;      /* Adds the horizontal scrollbar */
-      padding: 3rem 0;
-      gap: 3rem;             /* Space between scenes */
-      
-      /* Standardizes the feel of the scroll */
-      scroll-snap-type: x proximity; 
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .scene-frame {
-      flex: 0 0 600px;       /* Forces every scene to be exactly 600px wide */
-      scroll-snap-align: start;
-    }
-  }
-
-  /* Custom Scrollbar to match your museum aesthetic */
-  .filmstrip-container::-webkit-scrollbar {
-    height: 8px;
-  }
-  .filmstrip-container::-webkit-scrollbar-track {
-    background: #e2d9c2; 
-  }
-  .filmstrip-container::-webkit-scrollbar-thumb {
-    background: #8a7345;
-    border-radius: 10px;
-  }
 </style>
 
-{% assign plate_doc = site.plates | where: "image_id", page.image_id | first %}
-{% assign d = site.data.plates | where: "image_id", page.image_id | first %}
+{% comment %}
+1. INDEX EVERYTHING BY IMAGE_ID: All satellite files.
+{% endcomment %}
 
-<section class="chapter-intro-section">
-  <div class="container">
-    <div class="row align-items-center">
+{% assign man_map = site.data.manifest | group_by: "image_id" %}
+{% assign loc_map = site.data.location | group_by: "image_id" %}
+{% assign attr_map = site.data.attribution | group_by: "image_id" %}
+{% assign plate_map = site.plates | group_by: "image_id" %}
+{% assign ref_map = site.data.zotero.references | group_by: "id" %}
 
-      <div class="col-lg-6">
-        <h4 class="text-uppercase small fw-light text-muted mb-2" style="letter-spacing: 2px;">
-          Chapter {{ page.chapter_number }} — Part {{ page.part_number }}
-        </h4>
-        <h1 class="display-4 serif-font mb-4">{{ page.title }}</h1>
-        <div class="lead serif-font" style="font-size: 1.25rem; color: #4a4a4a;">
-          {{ content }} </div>
-      </div>
+{% comment %}
+2. LOOKUP DATA FOR THIS SPECIFIC CHAPTER
+{% endcomment %}
 
-      <div class="col-lg-6 mt-4 mt-lg-0">
-        <div class="map-box rounded">
-          <img src="{{ page.image | relative_url }}" class="img-fluid w-100" alt="Map of {{ page.title }}">
-          <p class="small text-muted mt-2 mb-0 text-center italic-serif">
-            Figure {{ page.chapter_number }}
-          </p>
-          <p>{{ page.prompt }}</p>
-        </div>
-      </div>
+{% assign target_id = page.image_id | append: "" | strip %}
 
-    </div>
+{% assign man = man_map | where: "name", target_id | map: "items" | first | first %}
+{% assign loc = loc_map | where: "name", target_id | map: "items" | first | first %}
+{% assign plate = plate_map | where: "name", target_id | map: "items" | first | first %}
+
+<article class="container book-hero col-xxl-8 px-4 py-5">
+  <h4 class="text-uppercase small fw-bold text-muted">Part {{ page.part_number }} - Chapter {{ page.chapter_number }}</h4>
+  <h1 class="fw-light mb-5">{{ page.chapter_title }}</h1>
+  <hr class="my-5">
+
+  <div class="serif-font fs-5 lh-base">
+    {{ content | markdownify }}
   </div>
-</section>
+</article>

@@ -42,7 +42,6 @@ collections_dir: _content
 collections:
   chapters:
     output: true
-    sort_by: chapter_number
     permalink: /chapter/:name/
   pages:
     output: true

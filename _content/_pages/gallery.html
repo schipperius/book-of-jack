@@ -43,11 +43,11 @@ permalink: /gallery/
   }
 </style>
 
-
 {% comment %}
 Logic: Index everything. Even though we loop through the manifest,
 we normalize the ID to a string to ensure it matches the 'name' in our maps.
 {% endcomment %}
+
 {% assign loc_map = site.data.location | group_by: "image_id" %}
 {% assign attr_map = site.data.attribution | group_by: "image_id" %}
 {% assign plate_map = site.plates | group_by: "image_id" %}
@@ -59,6 +59,7 @@ we normalize the ID to a string to ensure it matches the 'name' in our maps.
     {% comment %}
     CRITICAL: Normalize ID to string to ensure the 'where' filter finds it
     {% endcomment %}
+    
     {% assign target_id = man.image_id | append: "" | strip %}
 
     {% assign loc = loc_map | where: "name", target_id | map: "items" | first | first %}

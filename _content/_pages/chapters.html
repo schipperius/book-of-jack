@@ -4,33 +4,55 @@ title: Chapters
 permalink: /chapters/
 ---
 
+<style>
+  :root {
+    --scribe-gold: #d4af37;
+    --scribe-bg: #fdfaf3;
+    --scribe-text: #1a1a1a;
+  }
+
+  /* --- TYPOGRAPHY & AESTHETIC --- */
+  .serif-font {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.25em;
+    line-height: 1.6em;
+  }
+
+</style>
+
 {% comment %}
-1. Create Lookups: Index everything by image_id for high-speed retrieval.
+  1. Create Lookups: Index everything by image_id for high-speed retrieval.
 {% endcomment %}
-{% assign manifest_map = site.data.manifest | group_by: "image_id" %}
+
+{% assign man_map = site.data.manifest | group_by: "image_id" %}
 {% assign loc_map = site.data.location | group_by: "image_id" %}
 {% assign attr_map = site.data.attribution | group_by: "image_id" %}
 {% assign plate_map = site.plates | group_by: "image_id" %}
 
 <div class="container my-5">
-  {% comment %} Sort chapters by number {% endcomment %}
+  {% comment %} 
+    Sort chapters by number 
+  {% endcomment %}
+  
   {% assign chapters = site.chapters | sort: 'chapter_number' %}
 
   {% for chapter in chapters %}
   {% comment %}
   LOOKUP: Find Master Data for Chapter Cover
   {% endcomment %}
+
   {% assign ch_id = chapter.image_id | append: "" | strip %}
-  {% assign ch_manifest = manifest_map | where: "name", ch_id | map: "items" | first | first %}
+  {% assign ch_man = man_map | where: "name", ch_id | map: "items" | first | first %}
 
   <section class="chapter-group mb-5">
+
     <a href="{{ chapter.url | relative_url }}" class="text-decoration-none link-body-emphasis">
       <div class="chapter-header-block mb-4 mt-5">
         <div class="row g-0 rounded shadow-sm overflow-hidden border border-secondary-subtle bg-body-tertiary">
           <div class="col-md-5 col-lg-4">
             <div class="header-map-wrapper h-100">
-              {% if ch_manifest.image_path %}
-              <img src="{{ ch_manifest.image_path | relative_url }}" class="img-fluid h-100 w-100"
+              {% if ch_man.image_path %}
+              <img src="{{ ch_man.image_path | relative_url }}" class="img-fluid h-100 w-100"
                 style="object-fit: cover; min-height: 250px;" alt="{{ chapter.title }}">
               {% else %}
               <div class="bg-body-secondary h-100 d-flex align-items-center justify-content-center text-secondary">
@@ -41,21 +63,12 @@ permalink: /chapters/
           </div>
           <div class="col-md-7 col-lg-8 p-4 d-flex flex-column justify-content-center">
             <div class="chapter-meta mb-2">
-              <span class="badge border border-secondary-subtle text-uppercase small fw-light text-secondary"
-                style="letter-spacing: 1px;">
-                Part {{ chapter.part_number }}
-              </span>
-              <span class="badge border border-secondary-subtle text-uppercase small fw-light ms-2 text-secondary"
-                style="letter-spacing: 1px;">
-                Chapter {{ chapter.chapter_number }}
-              </span>
+              <h5 class="h-sans mb-2">Chapter {{ chapter.chapter_number }}</h5>
+              <h1 class="h-sans mb-2">{{ chapter.chapter_title }}</h1>
             </div>
-            <h3 class="serif-font display-6 mb-3">
-              {{ chapter.title }}
-            </h3>
-            <div class="chapter-excerpt small-serif text-secondary" style="font-size: 1.1rem; line-height: 1.5;">
-              {{ chapter.content | strip_html | truncatewords: 50 }}
-            </div>
+            <div class="serif-font" style="font-size: 1.1rem; line-height: 1.5;">
+              {{ chapter.intro | markdownify | strip_html | truncatewords: 65 }}
+            </div>            
           </div>
         </div>
       </div>
@@ -69,7 +82,7 @@ permalink: /chapters/
       LOOKUP: Retrieve data from the 3 CSV sources + Plates collection
       {% endcomment %}
       {% assign sc_id = scene.image_id | append: "" | strip %}
-      {% assign sc_manifest = manifest_map | where: "name", sc_id | map: "items" | first | first %}
+      {% assign sc_man = man_map | where: "name", sc_id | map: "items" | first | first %}
       {% assign sc_loc = loc_map | where: "name", sc_id | map: "items" | first | first %}
       {% assign sc_attr = attr_map | where: "name", sc_id | map: "items" | first | first %}
       {% assign sc_plate = plate_map | where: "name", sc_id | map: "items" | first | first %}
@@ -77,9 +90,9 @@ permalink: /chapters/
       <div class="col-md-4 col-lg-3">
         <div class="card h-100 border-0 shadow-sm bg-body-secondary overflow-hidden">
           <div class="position-relative">
-            {% if sc_manifest.image_path %}
-            <img src="{{ sc_manifest.image_path | relative_url }}" class="card-img-top"
-              alt="{{ sc_manifest.image_title }}" style="aspect-ratio: 4/3; object-fit: cover;">
+            {% if sc_man.image_path %}
+            <img src="{{ sc_man.image_path | relative_url }}" class="card-img-top"
+              alt="{{ sc_man.image_title }}" style="aspect-ratio: 4/3; object-fit: cover;">
             {% else %}
             <div class="bg-body-tertiary d-flex align-items-center justify-content-center text-secondary"
               style="aspect-ratio: 4/3;">
@@ -87,7 +100,7 @@ permalink: /chapters/
             </div>
             {% endif %}
             <span class="badge position-absolute top-0 end-0 m-2 bg-dark text-white opacity-75 fw-normal">
-              {{ sc_manifest.image_title }}
+              {{ sc_man.image_title }}
             </span>
           </div>
 
@@ -97,7 +110,7 @@ permalink: /chapters/
             </p>
             <h6 class="card-title mb-2 serif-font" style="font-size: 1.1rem; line-height: 1.2;">
               <a href="{{ scene.url | relative_url }}" class="stretched-link text-decoration-none link-body-emphasis">
-                {{ sc_manifest.image_title }}
+                {{ sc_man.image_title }}
               </a>
             </h6>
             <p class="small text-secondary mb-3" style="font-size: 0.85rem; line-height: 1.4;">

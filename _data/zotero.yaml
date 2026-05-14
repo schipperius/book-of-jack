@@ -12,7 +12,7 @@ references:
   container-title: Egypt Fun Tours
   language: en-CA
   publication: Egypt Fun Tours
-  tags: chapter-01, images, narrative
+  tags: narrative, chapter-01, images
   title: 'Ancient Egyptian Offerings: Food, Rituals & The Afterlife'
   title-short: Ancient Egyptian Offerings
   type: post-weblog
@@ -178,24 +178,6 @@ references:
   title: The British Museum Images
   type: webpage
   URL: https://www.bmimages.com/preview.asp?image=01482536001
-
-- id: BuildingWebsiteLot
-  abstract: >-
-    When someone says, “We need a new website,” it often sounds simple. But
-    anyone who has ever built a house knows that what looks simple on the
-    surface is actually a series of hundreds of decisions that determine whether
-    the final result works beautifully or becomes a constant source of
-    frustration.
-  accessed:
-    - year: 2026
-      month: 4
-      day: 15
-  citation-key: BuildingWebsiteLot
-  language: en
-  title: Building a Website Is a Lot Like Building a House
-  type: webpage
-  URL: >-
-    https://www.linkedin.com/pulse/building-website-lot-like-house-lori-highby-xnjac
 
 - id: colemanUCLAEncyclopediaEgyptology2013
   accessed:
@@ -603,6 +585,82 @@ references:
   type: document
   URL: http://www.inscriptifact.com/news/Biblos.pdf
 
+- id: kingAnatomyMountainThebes2017
+  abstract: "We present a detailed geologic study of the Thebes Formation at Gebel Gurnah in its locus typicus on the West Bank (opposite Luxor) of the Nile River in the Upper Nile Valley, Egypt. This is the first detailed measurement and lithologic description of the ∼340\_m thick (predominantly) carbonate section. The Thebes Formation is divided into thirteen major lithic units (A to M). We interpret data on the lithologic succession and variations, whole rock/clay mineralogy, and macro/micropaleontology in terms of deposition on a shallow carbonate platform episodically influenced by continental runoff, and describe six depositional sequences that we place in the global framework of Lower Eocene (Ypresian) sequence stratigraphy. We note however significant incompatibilities between the Thebes depositional sequences and the global sequences. We emend the definition of the Thebes Formation by defining its top as corresponding to level 326\_m\_at the top of Nodular Limestone ‘L’ (NLL), and assigning the overlying beds to the Minia Limestone Formation. New biostratigraphic data and revision of previous studies establish the direct assignment of the Thebes Formation to planktonic foraminiferal Zones E4/P6b (upper part), E5/P7 and (indirectly) Zone E6/P8, and (probably, indirectly) Zone E7a/”P9”, and to calcareous nannofossil Zone NP12 and lower Zone NP13 of the Lower Eocene (Ypresian) and provide a temporal framework spanning\_∼\_2.8 Myr from <52.45 to ∼49.6 Ma for the deposition of the Thebes Formation prior to the prominent sea level fall (∼49.6 Ma) towards the end of the Early Eocene. Dominantly carbonate deposition, with a strongly reduced detrital influx, occurred on a very wide shelf (probably) at least\_∼\_100\_km from the coastline. The thick sedimentary succession and the marked vertical lithologic variations are interpreted as resulting from sea level fluctuations imprinted on a long-term decrease in sea-level associated with rapid subsidence reflecting tectonic relaxation after the major Late Paleocene tectonic reorganization of the Syrian Arc."
+  accessed:
+    - year: 2026
+      month: 4
+      day: 28
+  author:
+    - family: King
+      given: Christopher
+    - family: Dupuis
+      given: Christian
+    - family: Aubry
+      given: Marie-Pierre
+    - family: Berggren
+      given: William A.
+    - family: Knox
+      given: Robert O. ’B.
+    - family: Galal
+      given: Wael Fathi
+    - family: Baele
+      given: Jean-Marc
+  author_list: >-
+    Christopher King, Christian Dupuis, Marie-Pierre Aubry, William A. Berggren,
+    Robert O. ’B. Knox, Wael Fathi Galal, Jean-Marc Baele
+  citation-key: kingAnatomyMountainThebes2017
+  collection-title: Phanerozoic Geology of Egypt
+  container-title: Journal of African Earth Sciences
+  container-title-short: Journal of African Earth Sciences
+  date: '2017-12-01'
+  DOI: 10.1016/j.jafrearsci.2017.05.008
+  ISSN: 1464-343X
+  issued:
+    - year: 2017
+      month: 12
+      day: 1
+  page: 61–108
+  publication: Journal of African Earth Sciences
+  source: ScienceDirect
+  tags: academic, chapter-01
+  title: >-
+    Anatomy of a mountain: The Thebes Limestone Formation (Lower Eocene) at
+    Gebel Gurnah, Luxor, Nile Valley, Upper Egypt
+  title-short: Anatomy of a mountain
+  type: article-journal
+  URL: https://www.sciencedirect.com/science/article/pii/S1464343X17301917
+  volume: '136'
+
+- id: lorihighbyBuildingWebsiteLot2026
+  abstract: >-
+    When someone says, “We need a new website,” it often sounds simple. But
+    anyone who has ever built a house knows that what looks simple on the
+    surface is actually a series of hundreds of decisions that determine whether
+    the final result works beautifully or becomes a constant source of
+    frustration.
+  accessed:
+    - year: 2026
+      month: 4
+      day: 15
+  author:
+    - literal: Lori Highby
+  author_list: undefined undefined
+  citation-key: lorihighbyBuildingWebsiteLot2026
+  container-title: BBuilding a Website is a lot like building a house
+  date: Mar 31, 2026
+  genre: Blog
+  issued:
+    - year: 2026
+      month: 3
+      day: 31
+  language: en
+  publication: BBuilding a Website is a lot like building a house
+  title: Building a Website Is a Lot Like Building a House
+  type: webpage
+  URL: >-
+    https://www.linkedin.com/pulse/building-website-lot-like-house-lori-highby-xnjac
+
 - id: MiningHistoryAlphabet
   abstract: >-
     The single richest source of information about the world’s first alphabet is
@@ -614,11 +672,13 @@ references:
     - year: 2026
       month: 4
       day: 25
+  chapters: Chapter 02
   citation-key: MiningHistoryAlphabet
   container-title: The BAS Library
   language: en-US
+  note: 'chapters: Chapter 02'
   publication: The BAS Library
-  tags: chapter-02, narrative
+  tags: narrative, chapter-02
   title: Mining the History of the Alphabet at Serabit el-Khadem
   type: post-weblog
   URL: >-
@@ -646,7 +706,7 @@ references:
   language: en
   publication: World History Encyclopedia
   source: www.worldhistory.org
-  tags: images, narrative
+  tags: narrative, images
   title: 16th Century CE Flemish Book Printer
   type: article-journal
   URL: >-
@@ -712,7 +772,7 @@ references:
       month: 4
       day: 1
   author:
-    - literal: Parker, Hope
+    - literal: Parker Hope
   author_list: undefined undefined
   chapters: Chapter 02
   citation-key: parkerhopeProtoSinaiticInscriptionsSerabit2023
@@ -758,7 +818,7 @@ references:
       day: 1
   language: en-US
   publication: Kimball Group
-  section: Articles & Design Tips
+  tags: narrative, colophon
   title: Data Warehouse Dining Experience
   type: webpage
   URL: https://www.kimballgroup.com/2004/01/data-warehouse-dining-experience/
@@ -827,6 +887,7 @@ references:
     - family: Fluzin
       given: Philippe
   author_list: Pierre Tallet, Georges Castel, Philippe Fluzin
+  chapters: Chapter 02
   citation-key: talletMetallurgicalSitesSouth2011
   container-title: Paléorient
   container-title-short: paleo
@@ -837,10 +898,11 @@ references:
   issued:
     - year: 2011
   language: en
+  note: 'chapters: Chapter 02'
   page: 79–89
   publication: Paléorient
   source: DOI.org (Crossref)
-  tags: chapter-02, narrative
+  tags: narrative, chapter-02
   title: >-
     Metallurgical sites of South Sinai (Egypt) in the Pharaonic Era: New
     Discoveries
@@ -919,6 +981,31 @@ references:
   type: graphic
   URL: https://en.wikipedia.org/w/index.php?title=Thoth_Hill&oldid=1289342176
 
+- id: tourWhyWasMiddle2025
+  abstract: "Find out\_ Egypt's great history,\_ Why Was The Middle Kingdom a Golden Age for Egypt , and the extent of progress in this period of Egypt's great past"
+  accessed:
+    - year: 2026
+      month: 4
+      day: 29
+  author:
+    - family: Tour
+      given: Egypt Online
+  author_list: Egypt Online Tour
+  citation-key: tourWhyWasMiddle2025
+  container-title: Egypt Online Tour
+  date: '2025-01-14T02:00:00.000000Z'
+  issued:
+    - year: 2025
+      month: 1
+      day: 14
+  language: en
+  publication: Egypt Online Tour
+  tags: narrative, chapter-01
+  title: Why Was The Middle Kingdom a Golden Age for Egypt
+  type: webpage
+  URL: >-
+    https://egyptonlinetour.com/blog/why-was-the-middle-kingdom-a-golden-age-for-egypt
+
 - id: ValleyQueens
   citation-key: ValleyQueens
   tags: images-01, chapter-01
@@ -943,11 +1030,13 @@ references:
     - year: 2026
       month: 4
       day: 25
+  chapters: Chapter 01
   citation-key: WadiElHolInscription
   container-title: The BAS Library
   language: en-US
+  note: 'chapters: Chapter 01'
   publication: The BAS Library
-  tags: chapter-01, narrative
+  tags: narrative, chapter-01
   title: 'The Wadi el-Hôl Inscription: Earlier than Serabit?'
   title-short: The Wadi el-Hôl Inscription
   type: post-weblog
@@ -973,7 +1062,7 @@ references:
       day: 30
   language: en
   publication: Immortal Egypt
-  tags: academic, colophon, narrative
+  tags: academic, colophon
   title: '‘Houses of Books’, ‘Houses of Life’: libraries past, present & future'
   title-short: ‘Houses of Books’, ‘Houses of Life’
   type: webpage

@@ -1,5 +1,5 @@
 ---
-layout: chapter
+layout: scene
 image_id: s02-map-land-fayrous
 title: "Cross into the Sinai Peninsula"
 

@@ -1,7 +1,6 @@
 ---
 layout: scene
 image_id: s01e01-leaving-nile-valley
-permalink: /scene/leaving-nile-valley
 
 scene_number: 1
 chapter_number: 1

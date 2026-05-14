@@ -1,0 +1,36 @@
+{% comment %} _includes/chapter-image.html {% endcomment %}
+{% assign target_id = include.id | append: "" | strip %}
+
+{% comment %} Perform the lookups using the passed ID {% endcomment %}
+{% assign man = man_map | where: "name", target_id | map: "items" | first | first %}
+{% assign loc = loc_map | where: "name", target_id | map: "items" | first | first %}
+
+{% comment %}
+DETERMINE ALIGNMENT SIDE, MARGINS, & TEXT DIRECTION
+{% endcomment %}
+{% if include.side == 'start' %}
+{% assign float_class = 'float-md-start' %}
+{% assign margin_class = 'me-md-4' %}
+{% assign text_class = 'text-start' %}
+{% else %}
+{% assign float_class = 'float-md-end' %}
+{% assign margin_class = 'ms-md-4' %}
+{% assign text_class = 'text-end' %}
+{% endif %}
+
+{% if man %}
+<figure class="figure map-box {{ float_class }} {{ margin_class }} mb-3" style="width: 400px;">
+  <!-- Title updates dynamically via {{ text_class }} -->
+  <h4 class="fw-light h-sans small border-bottom pb-2 {{ text_class }}">{{ page.image_title }}</h4>
+
+  <img src="{{ man.image_path | relative_url }}" class="figure-img img-fluid rounded d-block mx-auto"
+    alt="{{ man.image_title }}" loading="lazy" />
+
+  <!-- Figcaption updates dynamically via {{ text_class }} -->
+  <figcaption class="figure-caption small text-muted px-2 my-2 {{ text_class }}">
+    {{ man.image_title }} | {{ loc.super_period }} | {{ loc.period }}
+  </figcaption>
+</figure>
+{% else %}
+<!-- Error: Image ID {{ target_id }} not found in manifest -->
+{% endif %}
