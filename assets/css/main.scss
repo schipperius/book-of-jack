@@ -1,8 +1,7 @@
 --- 
-# Two lines of triple dashes tell Jekyll to process this SCSS file 
 ---
 // Import variables.scss partial include first!
-@import "variables";
+@import "overrides";
 
 // Import Bootstrap 5.3 after the variables file.
 @import "bootstrap/bootstrap";

@@ -2,12 +2,6 @@
 // MICRO-OPTIMIZATIONS & CUSTOM OVERRIDES
 // ==========================================================================
 
-body {
-  font-family: "Palatino Linotype", "Palatino", "Book Antiqua", "URW Palladio L", serif;
-  font-size: 18px;
-  line-height: 1.65;
-}
-
 p {
   margin-bottom: 1.2rem;
   text-rendering: optimizeLegibility;
@@ -33,6 +27,7 @@ h6 {
 figcaption,
 .figure-caption {
   font-family: $font-family-sans-serif; // Binds figcaption to Helvetica stack globally
+  
 }
 
 //* Horizontal rules *//

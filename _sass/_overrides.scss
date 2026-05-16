@@ -1,0 +1,24 @@
+// ==========================================================================
+// 1. BOOTSTRAP VARIABLE OVERRIDES (Global Core Configuration)
+// ==========================================================================
+
+// Global Typography Stacks
+$font-family-serif: "Palatino Linotype", "Palatino", "Book Antiqua", "URW Palladio L", serif;
+$font-family-sans-serif: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+// Map global stacks to Bootstrap base elements
+$font-family-base: $font-family-serif;
+$font-family-headings: $font-family-sans-serif;
+
+// Base Sizing Parameters (Accessible Rems instead of Pixels)
+$font-size-base: 1.125rem; // Clean 18px baseline matching browser defaults
+$line-height-base: 1.65; // Clean loop clearance for Serif typography
+
+// Global Heading Defaults (Controlled via Bootstrap variables)
+$headings-color: #111111;
+$headings-font-weight: 300;
+
+// Anthology adjustments: Expand tracking on uppercase elements
+$headings-text-transform: uppercase; // Gives a luxury editorial feel
+$headings-letter-spacing: 0.1em; // Adds breathing room to tight sans letters
+
