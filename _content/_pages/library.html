@@ -170,7 +170,7 @@ permalink: /library/
               {% for initial in initials %}{{ initial | slice: 0 }}. {% endfor %}
               {% if forloop.index < author_count %} {% assign next_to_last=author_count | minus: 1 %} {% if
                 forloop.index==next_to_last %}&amp; {% else %}, {% endif %} {% endif %} {% endfor %} {% comment %} Year and
-                Title {% endcomment %} ({{ entry.issued.[0]year | default: "n.d." }}). {{ entry.title |
+                Title {% endcomment %} ({{ entry.issued[0].year | default: "n.d." }}). {{ entry.title |
                 default: "Untitled Work" }}. {% comment %} Journal/Publication Details {% endcomment %} {% if
                 entry["container-title"] %} <em>{{ entry["container-title"] }}</em>{% if entry.volume %}, <em>{{
                 entry.volume }}</em>{% endif %}{% if entry.issue %}({{ entry.issue }}){% endif %}{% if entry.page %}, {{
@@ -204,7 +204,7 @@ permalink: /library/
               {% for initial in initials %}{{ initial | slice: 0 }}. {% endfor %}
               {% if forloop.index < author_count %} {% assign next_to_last=author_count | minus: 1 %} {% if
                 forloop.index==next_to_last %}&amp; {% else %}, {% endif %} {% endif %} {% endfor %} {% comment %} Year and
-                Title {% endcomment %} ({{ entry.issued.[0]year | default: "n.d." }}). {{ entry.title |
+                Title {% endcomment %} ({{ entry.issued[0].year | default: "n.d." }}). {{ entry.title |
                 default: "Untitled Work" }}. {% comment %} Journal/Publication Details {% endcomment %} {% if
                 entry["container-title"] %} <em>{{ entry["container-title"] }}</em>{% if entry.volume %}, <em>{{
                   entry.volume }}</em>{% endif %}{% if entry.issue %}({{ entry.issue }}){% endif %}{% if entry.page %}, {{

@@ -18,6 +18,8 @@ GEM
       logger (~> 1.7)
       racc (~> 1.7)
     bigdecimal (4.1.2)
+    bootstrap (5.3.8)
+      popper_js (>= 2.11.8, < 3)
     citeproc (1.1.0)
       date
       forwardable
@@ -208,6 +210,7 @@ GEM
       hashery (~> 2.0)
       ruby-rc4
       ttfunk
+    popper_js (2.11.8)
     public_suffix (7.0.5)
     racc (1.8.1)
     rainbow (3.1.1)
@@ -291,12 +294,14 @@ PLATFORMS
 DEPENDENCIES
   base64
   bigdecimal
+  bootstrap (~> 5.3.0)
   csv
   execjs
   faraday-retry
   html-proofer
   jekyll (~> 4.3)
   jekyll-feed
+  jekyll-sass-converter (~> 3.0)
   jekyll-scholar
   jekyll-seo-tag (~> 2.8)
   jekyll-sitemap (~> 1.4)
@@ -312,6 +317,7 @@ CHECKSUMS
   benchmark (0.5.0) sha256=465df122341aedcb81a2a24b4d3bd19b6c67c1530713fd533f3ff034e419236c
   bibtex-ruby (6.2.0) sha256=d610eba78d6adf503a843daf144644449fb34e7c3f4a75e9ab67fae5dfd7c69a
   bigdecimal (4.1.2) sha256=53d217666027eab4280346fba98e7d5b66baaae1b9c3c1c0ffe89d48188a3fbd
+  bootstrap (5.3.8) sha256=1c23b06df24ec28a0058ad90a0da93e260d2c0a5c453d7087f6bad428464742f
   citeproc (1.1.0) sha256=278e6b8948133e82bef1c8204a1f88ca7adaa8744b9a283fe73e8f4cd0b53b95
   citeproc-ruby (2.1.8) sha256=192ce6525235adaa60d1dbc3f1b10b0839e86d98a94278736b807e234b3572e9
   colorator (1.1.0) sha256=e2f85daf57af47d740db2a32191d1bdfb0f6503a0dfbc8327d0c9154d5ddfc38
@@ -391,6 +397,7 @@ CHECKSUMS
   open-uri (0.5.0) sha256=7b4f06fdac39e6946aed15a8da82531580882fbbec80438adcb7c30d388887ca
   pathutil (0.16.2) sha256=e43b74365631cab4f6d5e4228f812927efc9cb2c71e62976edcb252ee948d589
   pdf-reader (2.15.1) sha256=18c6a986a84a3117fa49f4279fc2de51f5d2399b71833df5d2bccd595c7068ce
+  popper_js (2.11.8) sha256=f4b0be717fc0d50bdb3dbbc55788525a9e0e8f640b76c9971fc34ee609eadbd2
   public_suffix (7.0.5) sha256=1a8bb08f1bbea19228d3bed6e5ed908d1cb4f7c2726d18bd9cadf60bc676f623
   racc (1.8.1) sha256=4a7f6929691dbec8b5209a0b373bc2614882b55fc5d2e447a21aaa691303d62f
   rainbow (3.1.1) sha256=039491aa3a89f42efa1d6dec2fc4e62ede96eb6acd95e52f1ad581182b79bc6a
