@@ -8,7 +8,7 @@ part_number: 1
 chapter_number: 1
 scenes: "1-6"
 
-intro: > 
+intro: |
   Although J was the last letter added to the English alphabet, this digital anthology begins more than 3,800 years ago on a trade route across the Qena Bend of the River Nile.
 
   During the Middle Kingdom, Egypt was experiencing its second golden age, a period of sustained peace and prosperity, significant cultural achievements in art and literature, and massive expansion of commerce  and foreign trade.

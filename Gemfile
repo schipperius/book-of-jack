@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gem "jekyll", "~> 4.3" 
 gem "jekyll-sass-converter", "~> 3.0"
-gem 'bootstrap', '~> 5.3.0'
+
 # Standard plugins group (Jekyll automatically requires these)
 group :jekyll_plugins do
   gem "jekyll-scholar"

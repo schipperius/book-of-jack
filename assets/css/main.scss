@@ -1,11 +1,11 @@
 --- 
 ---
-// Import variables.scss partial include first!
+// Import variable overrides first!
 @import "overrides";
 
-// Import Bootstrap 5.3 after the variables file.
+// Import Bootstrap 5.3 next.
 @import "bootstrap/bootstrap";
 
-// Import Miccro-Customizations after Bootstrap
+// Import Miccro-Customizations at
 @import "typography";
 

@@ -65,10 +65,12 @@ collections:
 # -----------------------------------------------------------------------------
 
 sass:
-  load_paths:
-    - _sass
-    - vendor/bundle
-
+  style: compressed
+  quiet_deps: true
+  silence_deprecations:
+    - color-functions
+    - import
+    - mixed-decls
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
