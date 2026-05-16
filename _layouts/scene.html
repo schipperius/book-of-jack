@@ -42,7 +42,7 @@ layout: default
       {% if page.chapter_number %}Chapter {{ page.chapter_number }}{% endif %}
       {% if page.scenes %}| Scenes {{ page.scenes }}{% endif %}
     </h6>
-    <h1 class="gold-text display-5 fw-light serif-heading">{{ man.image_title | default: man.image_title }}</h1>
+    <h1 class="gold-text display-5 fw-light">{{ man.image_title | default: man.image_title }}</h1>
 
     {% comment %}
     CURATOR'S DRAWER TRIGGER:
@@ -85,7 +85,7 @@ layout: default
     {% endif %}
   </div>
   {% endif %}
-  <hr class="my-5 gold-rule border-bottom">
+  <hr class="my-5 gold-rule">
 
   <div class="card-body p-4 p-md-5 drop-cap">
     {{ content }}

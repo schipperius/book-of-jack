@@ -10,23 +10,6 @@ layout: default
     overflow-x: hidden;
   }
 
-  /* --- TYPOGRAPHY & AESTHETIC --- */
-  .serif-font {
-    font-family: 'EB Garamond', serif;
-    font-size: 1.25em;
-    line-height: 1.6em;
-  }
-
-  .sans-serif-font {
-    font-family:'Montserrat', sans-serif;
-    color: #ab7f3d
-  }
-
-  .sans-serif-font {
-    font-family:'Montserrat', sans-serif;
-    color: #6a3e2a
-  }
-
   .map-box {
     border: 1px solid #ab7f3d;
     padding: 10px;
@@ -61,11 +44,11 @@ layout: default
 {% assign plate = plate_map | where: "name", target_id | map: "items" | first | first %}
 
 <article class="container book-hero col-xxl-8 px-4 py-5">
-  <h4 class="text-uppercase small fw-bold text-muted">Part {{ page.part_number }} - Chapter {{ page.chapter_number }}</h4>
-  <h1 class="fw-light mb-5">{{ page.chapter_title }}</h1>
+  <h5 class="small text-muted">Part {{ page.part_number }} - Chapter {{ page.chapter_number }}</h5>
+  <h1 class="">{{ page.chapter_title }}</h1>
   <hr class="my-5">
 
-  <div class="serif-font fs-5 lh-base">
+  <div class="">
     {{ content | markdownify }}
   </div>
 </article>

@@ -1,3 +1,41 @@
+// ==========================================================================
+// MICRO-OPTIMIZATIONS & CUSTOM OVERRIDES
+// ==========================================================================
+
+body {
+  font-family: "Palatino Linotype", "Palatino", "Book Antiqua", "URW Palladio L", serif;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+p {
+  margin-bottom: 1.2rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+h4,
+h5,
+h6 {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+figcaption,
+.figure-caption {
+  font-family: $font-family-sans-serif; // Binds figcaption to Helvetica stack globally
+}
+
+//* Horizontal rules *//
 .book-hero hr {
   /* Reset default Bootstrap styling */
   border: none;

@@ -71,10 +71,6 @@ we normalize the ID to a string to ensure it matches the 'name' in our maps.
         <figure class="mb-0 d-flex flex-column h-100">
 
           <div class="position-relative overflow-hidden">
-            {% comment %}
-            Logic: Link to the PLATE (long form) if it exists,
-            otherwise you might want to link to the SCENE.
-            {% endcomment %}
             {% if plate.url %}
             <a href="{{ plate.url | relative_url }}" class="d-block">
               {% endif %}
@@ -100,8 +96,7 @@ we normalize the ID to a string to ensure it matches the 'name' in our maps.
           </div>
 
           <figcaption class="card-body d-flex flex-column">
-            <h5 class="card-title archival-font h6 mb-2">{{ man.image_title }}</h5>
-
+            <h6 class="card-title small mb-2">{{ man.image_title }}</h6>
             {% comment %} Logic: Show plate caption, then manifest title {% endcomment %}
             <p class="card-text small text-muted flex-grow-1">
               {{ plate.image_caption | default: man.image_title | truncate: 100 }}

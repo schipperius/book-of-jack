@@ -19,16 +19,13 @@ DETERMINE ALIGNMENT SIDE, MARGINS, & TEXT DIRECTION
 {% endif %}
 
 {% if man %}
-<figure class="figure map-box {{ float_class }} {{ margin_class }} mb-3" style="width: 400px;">
-  <!-- Title updates dynamically via {{ text_class }} -->
-  <h4 class="fw-light h-sans small border-bottom pb-2 {{ text_class }}">{{ page.image_title }}</h4>
-
+<figure class="figure map-box {{ float_class }} {{ margin_class }} mb-3" style="width: 450px;">
   <img src="{{ man.image_path | relative_url }}" class="figure-img img-fluid rounded d-block mx-auto"
     alt="{{ man.image_title }}" loading="lazy" />
 
   <!-- Figcaption updates dynamically via {{ text_class }} -->
   <figcaption class="figure-caption small text-muted px-2 my-2 {{ text_class }}">
-    {{ man.image_title }} | {{ loc.super_period }} | {{ loc.period }}
+   {{ man.image_title }} | {{ loc.super_period }} | {{ loc.period }}
   </figcaption>
 </figure>
 {% else %}
