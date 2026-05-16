@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: 2. Set up Python & Sync Data
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
           python-version: '3.x'
       - name: Run Data Sync Script
