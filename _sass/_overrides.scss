@@ -6,19 +6,24 @@
 $font-family-serif: "Palatino Linotype", "Palatino", "Book Antiqua", "URW Palladio L", serif;
 $font-family-sans-serif: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 
-// Map global stacks to Bootstrap base elements
+// Map global stacks to Bootstrap base elements 
 $font-family-base: $font-family-serif;
-$font-family-headings: $font-family-sans-serif;
+
+// FIX: Changed from $font-family-headings to Bootstrap's native variable name
+$headings-font-family: $font-family-sans-serif;
 
 // Base Sizing Parameters (Accessible Rems instead of Pixels)
-$font-size-base: 1.125rem; // Clean 18px baseline matching browser defaults
-$line-height-base: 1.6; // Clean loop clearance for Serif typography
+$font-size-base: 1.125rem;
+$line-height-base: 1.6;
 
 // Global Heading Defaults (Controlled via Bootstrap variables)
 $headings-color: #111111;
-$headings-font-weight: 300;
+$headings-font-weight: 400;
 
-// Anthology adjustments: Expand tracking on uppercase elements
-$headings-text-transform: uppercase; // Gives a luxury editorial feel
-$headings-letter-spacing: 0.1em; // Adds breathing room to tight sans letters
+// ==========================================================================
+// 2. BOOTSTRAP EXTRA HEADING UTILITIES (Add variables Bootstrap lacks)
+// ==========================================================================
+// Because Bootstrap doesn't provide global text-transform variables for headings,
+// we apply them explicitly to the selector down here.
+
 

@@ -1,40 +1,58 @@
-<header class="navbar container sticky-top bg-body border-bottom px-2 py-3">
-  <div class="d-flex align-items-center justify-content-between w-100">
+<header class="navbar container sticky-top bg-body border-bottom px-2 pb-3 py-md-3">
+  <!-- 
+    CHANGE 1: Added "flex-wrap" to let elements drop to a second row on mobile.
+    "gap-2 gap-md-0" adds vertical spacing between rows only when wrapped.
+  -->
+  <div class="d-flex align-items-center justify-content-between w-100 flex-wrap gap-2 gap-md-0">
 
     {% if page.url == '/' %}
-      {% assign brand_active_class = "btn-secondary" %}
-      {% assign text_class = "text-white" %}
+    {% assign brand_active_class = "btn-secondary" %}
+    {% assign text_class = "text-white" %}
     {% else %}
-      {% assign brand_active_class = "btn-outline-secondary" %}
-      {% assign text_class = "text-body-secondary" %}
+    {% assign brand_active_class = "btn-outline-secondary" %}
+    {% assign text_class = "text-body-secondary" %}
     {% endif %}
-    
-    <a class="navbar-brand d-flex align-items-center mb-0 btn btn-sm {{ brand_active_class }} border-0 px-2 py-1"
+
+    <!-- 
+      CHANGE 2: Added "order-1" to keep the brand on the left.
+    -->
+    <a class="navbar-brand d-flex align-items-center btn {{ brand_active_class }} border-0 px-2 py-0 order-1"
       href="{{ '/' | relative_url }}">
-      <span class="fw-normal fs-5 {{ text_class }} link-light">
+      <span class="fw-semibold fs-4 fs-md-3 {{ text_class }} link-light">
         {{ site.sup }} {{ site.title }}
       </span>
     </a>
-  
-    <nav class="d-flex align-items-center gap-1 gap-md-3">
+
+    <!-- 
+      CHANGE 3: Reworked the nav classes:
+      - "order-3 order-md-2" drops it to row 2 on mobile, pulls it back to the center on desktop.
+      - "w-100 w-md-auto" forces it to span full width on mobile so it clears row 1 completely.
+      - "justify-content-center" centers your menu icons neatly on smaller screens.
+    -->
+    <nav
+      class="d-flex align-items-center justify-content-center justify-content-md-start pt-2 gap-4 gap-md-3 order-3 order-md-2 w-100 w-md-auto">
       {% for link in site.data.navigation.main %}
-    
+
       {% if page.url == link.url %}
-        {% assign active_class = "btn-secondary" %}
+      {% assign active_class = "btn-secondary" %}
       {% else %}
-        {% assign active_class = "btn-outline-secondary" %}
+      {% assign active_class = "btn-outline-secondary" %}
       {% endif %}
-    
-      <a href="{{ link.url | relative_url }}" class="btn btn-sm {{ active_class }} d-flex align-items-center">
+
+      <a href="{{ link.url | relative_url }}" class="btn btn-sm {{ active_class }} d-flex align-items-center"
+        style="font-family: var(--bs-headings-font-family);">
         <i class="bi {{ link.icon }}"></i>
         <span class="ms-2 d-none d-md-inline">{{ link.title }}</span>
       </a>
       {% endfor %}
     </nav>
 
-    <div class="dropdown">
-      <button id="bd-theme" class="btn btn-outline-secondary btn-sm dropdown-toggle d-flex align-items-center" type="button"
-        data-bs-toggle="dropdown" aria-label="Toggle theme">
+    <!-- 
+      CHANGE 4: Added "order-2" to keep the theme picker locked to the top-right corner.
+    -->
+    <div class="dropdown order-2">
+      <button id="bd-theme" class="btn btn-outline-secondary btn-sm dropdown-toggle d-flex align-items-center"
+        type="button" data-bs-toggle="dropdown" aria-label="Toggle theme">
         <i class="bi bi-palette"></i>
       </button>
       <ul class="dropdown-menu dropdown-menu-end">
@@ -58,6 +76,7 @@
 
   </div>
 </header>
+
 
 <!-- This javascript snippet listens for theme changes and updates 
  the main button's icon to match the selection. -->
